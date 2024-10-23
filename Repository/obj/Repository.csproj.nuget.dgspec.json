@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CSharp_Projects\\PrnPawnShop\\Repository\\Repository.csproj": {}
+    "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "D:\\CSharp_Projects\\PrnPawnShop\\Repository\\Repository.csproj": {
+    "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CSharp_Projects\\PrnPawnShop\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "D:\\CSharp_Projects\\PrnPawnShop\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\OS\\.nuget\\packages\\",
-        "outputPath": "D:\\CSharp_Projects\\PrnPawnShop\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\Repository\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\OS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

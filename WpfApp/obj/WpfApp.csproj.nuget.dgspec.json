@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\WpfApp.csproj": {}
+    "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\WpfApp\\WpfApp.csproj": {}
   },
   "projects": {
-    "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\WpfApp.csproj": {
+    "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\WpfApp\\WpfApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\WpfApp.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\WpfApp\\WpfApp.csproj",
         "projectName": "WpfApp",
-        "projectPath": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\WpfApp.csproj",
-        "packagesPath": "C:\\Users\\OS\\.nuget\\packages\\",
-        "outputPath": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\WpfApp\\WpfApp.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\WpfApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\OS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
