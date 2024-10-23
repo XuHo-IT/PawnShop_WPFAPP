@@ -11,6 +11,7 @@ namespace BussinessObject
         public int UserID { get; set; }
         public string userFullName { get; set; }
         public string Telephone { get; set; }
+        public bool Gender { get; set; }
         public string EmailAddress { get; set; }
         public DateTime? UserBirthday { get; set; }
         public byte? UserRole { get; set; }
