@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace BussinessObject
 {
-    public class Customer
+    internal class CapitalInformation
     {
-        public string Name { get; set; }
-        public string PhoneNumber { get; set; }
     }
 }
