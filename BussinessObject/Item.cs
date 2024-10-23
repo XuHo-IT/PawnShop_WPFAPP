@@ -10,8 +10,6 @@ namespace BussinessObject
     {
         public string ItemName { get; set; }
         public decimal Value { get; set; }
-        public DateTime PawnDate { get; set; }
-        public DateTime ExpiryDate { get; set; }
-        public bool IsLiquidated { get; set; }
+        public decimal Interest { get; set; }
     }
 }
