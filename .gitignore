@@ -8,15 +8,15 @@
 *.userosscache
 *.sln.docstates
 
-# User-specific files (Mono Auto Generated)
-mono_crash.*
-
-# Mono auto generated files
+# Mono Auto Generated
 mono_crash.*
 
 # Build results
 [Bb]in/
 [Oo]bj/
+
+# Ignore build output and temporary files
+obj/
 
 # Visual Studio 2022
 .vs/
@@ -24,18 +24,13 @@ mono_crash.*
 # Caches
 *.dtbcache.v2
 
-.suo
-
-# Layout files
-v17/DocumentLayout.json
-
-
 # Others
 *.log
 *.tlog
 *.ide
 *.pdb
-BussinessObject/obj/Debug/net8.0/BussinessObject.AssemblyInfo.cs
-Repository/obj/Debug/net8.0/Repository.AssemblyInfo.cs
-Service/obj/Debug/net8.0/Service.AssemblyInfo.cs
-WpfApp/obj/Debug/net8.0-windows/WpfApp.AssemblyInfo.cs
+
+# Additional ignores for various environments and systems
+*.tmp
+*.cache
+*.vscode/
