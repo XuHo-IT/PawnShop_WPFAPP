@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "BussinessObject\\ShopInformation.cs",
               "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\BussinessObject\\ShopInformation.cs",
               "RelativeToolTip": "BussinessObject\\ShopInformation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA5AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T01:54:56.781Z",
               "EditorCaption": ""
@@ -43,8 +43,7 @@
               "RelativeToolTip": "BussinessObject\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T01:37:33.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T01:37:33.347Z"
             }
           ]
         }
