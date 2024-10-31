@@ -1,0 +1,83 @@
+﻿<Window x:Class="WpfApp.Liquidation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="Liquidation" Height="450" Width="800 ">
+    <Grid>
+        <!-- Account Information Section -->
+        <GroupBox Header="Capital Information" Margin="10,47,494,222">
+            <StackPanel Margin="0,0,26,0">
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <Label Content="Safe Capital" Width="100" />
+                    <TextBox Text="100000000" Width="150" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Content="Current Capital" Width="100" />
+                    <TextBox Text="50000000" Width="150" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Content="Pawn Capital" Width="100" />
+                    <TextBox Text="50000000" Width="150" />
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Search Section -->
+        <GroupBox Header="Search" Margin="311,47,10,222">
+            <StackPanel Margin="0,0,-2,0" Height="128">
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" Width="437" HorizontalAlignment="Left">
+                    <Label Content="Customer Name" Width="100" />
+                    <TextBox Width="260" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <Label Content="Pawn Item" Width="100" />
+                    <TextBox Width="260" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <Label Content="Contract start at:" Width="100" />
+                    <DatePicker Width="107" />
+                    <Label Content="to:" Margin="10,0,0,0" Width="30" Background="#00000000" />
+                    <DatePicker Width="111" />
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+
+        <!-- Data Grid for Pawned Items -->
+        <DataGrid Name="PawnItemsGrid" AutoGenerateColumns="False" Margin="10,217,10,45" IsReadOnly="True" SelectionChanged="PawnItemsGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Contract Number" Width="110" Binding="{Binding ContractNumber}" />
+                <DataGridTextColumn Header="User Full Name" Width="120" Binding="{Binding UserRealName}" />
+                <DataGridTextColumn Header="Pawn Item" Width="100" Binding="{Binding Item}" />
+                <DataGridTextColumn Header="Pawn Money" Width="100" Binding="{Binding PawnMoney}" />
+                <DataGridTextColumn Header="Phone Number" Width="110" Binding="{Binding PhoneNumber}" />
+                <DataGridTextColumn Header="Interest" Width="60" Binding="{Binding Interest}" />
+                <DataGridTextColumn Header="Pawn Date" Width="100" Binding="{Binding StartDate}" />
+                <DataGridTextColumn Header="Due Date" Width="100" Binding="{Binding EndDate}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <!-- Finalize Button -->
+        <Button Content="Liquidate" Width="100" Height="30" Margin="10,394,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Orange" Foreground="White" Click="Button_Click" />
+        <StackPanel Height="42" VerticalAlignment="Top">
+            <StackPanel Height="19">
+                <Label Content="PawnShop Management" Height="20" Padding="0,0,0,0"/>
+
+            </StackPanel>
+            <Border BorderBrush="Black" BorderThickness="0.5" Height="21">
+                <Menu DockPanel.Dock="Top">
+                    <MenuItem Header="Thông tin cá nhân" Margin="5,0,0,0" />
+                    <MenuItem Header="Thông tin cửa hàng" />
+                    <MenuItem Header="Trợ giúp" />
+                    <MenuItem Header="Công cụ" />
+                </Menu>
+            </Border>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Width="96" Background="White" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="684,60,0,0" Height="132">
+            <Button Content="Search" Width="60" Margin="10,10,10,5" Background="#FFFF7230" Foreground="White" Click="Search_Click" Height="50" />
+            <Button Content="Menu" Width="60" Margin="10,15,10,10" Background="#FFFF7230" Foreground="White" Click="Menu_Click" Height="50" RenderTransformOrigin="0.46,1.082" HorizontalAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</Window>

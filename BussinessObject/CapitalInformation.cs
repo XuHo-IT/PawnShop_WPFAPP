@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BussinessObject
+﻿namespace BussinessObject
 {
     internal class CapitalInformation
     {
+        
+        public int SafeCapital { get; set; }
+        public int CurrentCapital { get; set; }
+        public int InvestCapital { get; set; }
+        public int ExpectedCapital { get; set; }
     }
 }

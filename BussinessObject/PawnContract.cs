@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BussinessObject
+﻿namespace BussinessObject
 {
     public class PawnContract
     {
@@ -14,7 +8,8 @@ namespace BussinessObject
         public String PawnMoney { get; set; }
         public String PhoneNumber { get; set; }
         public float Interest { get; set; }
-        public DateTime StartDate { get; set; }
+        public DateTime PawnDate { get; set; }
         public DateTime EndDate { get; set; }
     }
 }
+    

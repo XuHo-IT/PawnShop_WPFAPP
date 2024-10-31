@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj": {}
+    "C:\\Users\\Admin\\Source\\Repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj": {
+    "C:\\Users\\Admin\\Source\\Repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\PawnShop_WPFAPP\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\PawnShop_WPFAPP\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
