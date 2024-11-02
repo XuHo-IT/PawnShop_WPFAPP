@@ -1,18 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace BussinessObject
 {
-    internal class ShopInformation
+    public class ShopInformation
     {
-        public int ShopID { get; set; }
+        [Key] 
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Shop Name is required.")]
+        [StringLength(100, ErrorMessage = "Shop Name cannot exceed 100 characters.")]
         public string ShopName { get; set; }
+
+        [Required(ErrorMessage = "Shop Address is required.")]
+        [StringLength(200, ErrorMessage = "Shop Address cannot exceed 200 characters.")]
         public string ShopAddress { get; set; }
-        public string RoomDetailDescription { get; set; }
+
+        [Phone(ErrorMessage = "Invalid phone number.")]
         public string Telephone { get; set; }
-      
     }
 }
