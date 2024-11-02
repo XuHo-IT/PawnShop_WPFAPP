@@ -5,19 +5,15 @@
 *.rsuser
 *.suo
 *.user
-*.userosscach.vs/PrnPawnShop/DesignTimeBuild/.dtbcache.v2e
 *.sln.docstates
-.vs/PrnPawnShop/v17/.suo
 # Mono Auto Generated
 mono_crash.*
-.vs/PrnPawnShop/v17/.futdcache.v2
 # Build results
 [Bb]in/
 [Oo]bj/
 
 # Ignore build output and temporary files
 obj/
-.vs/PrnPawnShop/v17/DocumentLayout.json
 # Visual Studio 2022
 .vs/
 

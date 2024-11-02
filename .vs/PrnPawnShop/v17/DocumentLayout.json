@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "D:\\CSharp_Projects\\PrnPawnShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB05D0CD-7339-4ABB-A85D-30AE9C5E4D48}|Repository\\Repository.csproj|d:\\csharp_projects\\prnpawnshop\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB05D0CD-7339-4ABB-A85D-30AE9C5E4D48}|Repository\\Repository.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|d:\\csharp_projects\\prnpawnshop\\wpfapp\\memberwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\memberwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25A46F26-B538-441A-9573-61F3E89CBC76}|BussinessObject\\BussinessObject.csproj|d:\\csharp_projects\\prnpawnshop\\bussinessobject\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A46F26-B538-441A-9573-61F3E89CBC76}|BussinessObject\\BussinessObject.csproj|solutionrelative:bussinessobject\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|d:\\csharp_projects\\prnpawnshop\\wpfapp\\aminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\aminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25A46F26-B538-441A-9573-61F3E89CBC76}|BussinessObject\\BussinessObject.csproj|d:\\csharp_projects\\prnpawnshop\\bussinessobject\\shopinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25A46F26-B538-441A-9573-61F3E89CBC76}|BussinessObject\\BussinessObject.csproj|solutionrelative:bussinessobject\\shopinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|d:\\csharp_projects\\prnpawnshop\\wpfapp\\informationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\informationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB05D0CD-7339-4ABB-A85D-30AE9C5E4D48}|Repository\\Repository.csproj|d:\\csharp_projects\\prnpawnshop\\repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AB05D0CD-7339-4ABB-A85D-30AE9C5E4D48}|Repository\\Repository.csproj|solutionrelative:repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|d:\\csharp_projects\\prnpawnshop\\wpfapp\\liquidate.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\liquidate.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|d:\\csharp_projects\\prnpawnshop\\wpfapp\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|d:\\csharp_projects\\prnpawnshop\\wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25A46F26-B538-441A-9573-61F3E89CBC76}|BussinessObject\\BussinessObject.csproj|d:\\csharp_projects\\prnpawnshop\\bussinessobject\\pawncontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25A46F26-B538-441A-9573-61F3E89CBC76}|BussinessObject\\BussinessObject.csproj|solutionrelative:bussinessobject\\pawncontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25A46F26-B538-441A-9573-61F3E89CBC76}|BussinessObject\\BussinessObject.csproj|d:\\csharp_projects\\prnpawnshop\\bussinessobject\\capitalinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25A46F26-B538-441A-9573-61F3E89CBC76}|BussinessObject\\BussinessObject.csproj|solutionrelative:bussinessobject\\capitalinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,15 +42,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MemberWindow.xaml",
+              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\MemberWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\MemberWindow.xaml",
+              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\MemberWindow.xaml",
+              "RelativeToolTip": "WpfApp\\MemberWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T14:23:48.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InformationWindow.xaml",
+              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\InformationWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\InformationWindow.xaml",
+              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\InformationWindow.xaml",
+              "RelativeToolTip": "WpfApp\\InformationWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T14:23:00.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Liquidate.xaml",
+              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\Liquidate.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Liquidate.xaml",
+              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\Liquidate.xaml",
+              "RelativeToolTip": "WpfApp\\Liquidate.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T14:21:09.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AminWindow.xaml",
+              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\AminWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\AminWindow.xaml",
+              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\AminWindow.xaml",
+              "RelativeToolTip": "WpfApp\\AminWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T14:20:19.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\App.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\App.xaml",
+              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\App.xaml",
+              "RelativeToolTip": "WpfApp\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T14:19:50.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\Login.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Login.xaml",
+              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\WpfApp\\Login.xaml",
+              "RelativeToolTip": "WpfApp\\Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T14:18:30.424Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -49,52 +133,33 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Repository.csproj",
-              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\Repository\\Repository.csproj",
-              "RelativeDocumentMoniker": "Repository\\Repository.csproj",
-              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\Repository\\Repository.csproj",
-              "RelativeToolTip": "Repository\\Repository.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-25T03:46:23.202Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ShopInformation.cs",
-              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\BussinessObject\\ShopInformation.cs",
-              "RelativeDocumentMoniker": "BussinessObject\\ShopInformation.cs",
-              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\BussinessObject\\ShopInformation.cs",
-              "RelativeToolTip": "BussinessObject\\ShopInformation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "CapitalInformation.cs",
+              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\BussinessObject\\CapitalInformation.cs",
+              "RelativeDocumentMoniker": "BussinessObject\\CapitalInformation.cs",
+              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\BussinessObject\\CapitalInformation.cs",
+              "RelativeToolTip": "BussinessObject\\CapitalInformation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T03:50:44.438Z"
+              "WhenOpened": "2024-11-02T13:26:56.557Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\BussinessObject\\User.cs",
-              "RelativeDocumentMoniker": "BussinessObject\\User.cs",
-              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\BussinessObject\\User.cs",
-              "RelativeToolTip": "BussinessObject\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAqAAAA",
+              "DocumentIndex": 6,
+              "Title": "PawnContract.cs",
+              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\BussinessObject\\PawnContract.cs",
+              "RelativeDocumentMoniker": "BussinessObject\\PawnContract.cs",
+              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\BussinessObject\\PawnContract.cs",
+              "RelativeToolTip": "BussinessObject\\PawnContract.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T03:50:31.254Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\CSharp_Projects\\PrnPawnShop\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
-              "ToolTip": "D:\\CSharp_Projects\\PrnPawnShop\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "Repository\\UserRepository.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACsAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T03:46:53.174Z",
+              "WhenOpened": "2024-11-02T13:16:15.622Z",
               "EditorCaption": ""
             }
           ]
