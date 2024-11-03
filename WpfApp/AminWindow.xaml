@@ -12,8 +12,6 @@
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="Thông tin cá nhân" />
                 <MenuItem Header="Thông tin cửa hàng" />
-                <MenuItem Header="Trợ giúp" />
-                <MenuItem Header="Công cụ" />
             </Menu>
 
             <!-- Content Area -->
@@ -30,8 +28,7 @@
                 <UniformGrid Columns="2" Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
                     <Button Content="PAWN" Width="150" Height="50" Background="Orange" FontWeight="Bold" Margin="10" Click="Button_Click"/>
                     <Button Content="LIQUIDATE" Width="150" Height="50" Background="Orange" FontWeight="Bold" Margin="10"/>
-                    <Button Content="INCOME STATISTIC" Width="150" Height="50" Background="Orange" FontWeight="Bold" Margin="10"/>
-                    <Button Content="TRANSACTION &#xD;&#xA;HISTORY" Width="150" Height="50" Background="Orange" FontWeight="Bold" Margin="10" Click="Button_Click_1" VerticalContentAlignment="Center"/>
+                    <Button Content="STATISTIC" Height="50" Background="Orange" FontWeight="Bold" Margin="25,0,-175,0" Click="Button_Click_1" VerticalContentAlignment="Center"/>
                 </UniformGrid>
             </StackPanel>
         </DockPanel>

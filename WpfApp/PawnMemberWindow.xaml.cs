@@ -21,8 +21,10 @@ namespace WpfApp
     /// </summary>
     public partial class PawnMemberWindow : Window
     {
+        private readonly PawnContractRepository pawnContractRepository;
         public PawnMemberWindow()
         {
+            pawnContractRepository = new PawnContractRepository();
             InitializeComponent();
         }
 
@@ -51,7 +53,7 @@ namespace WpfApp
             };
 
             // Call the static method directly on the class
-            PawnContractRepository.Instance.SendToAdminForApproval(item);
+            pawnContractRepository.SendToAdminForApproval(item);
 
             MessageBox.Show("Item submitted for admin approval.");
         }
