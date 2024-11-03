@@ -47,16 +47,37 @@ namespace BussinessObject.Migrations
                         new
                         {
                             BillId = 1,
-                            DateBuy = new DateTime(2024, 10, 24, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6866),
+                            DateBuy = new DateTime(2024, 10, 24, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8005),
                             ShopItemId = 1,
                             UserId = 1
                         },
                         new
                         {
                             BillId = 2,
-                            DateBuy = new DateTime(2024, 10, 29, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6872),
+                            DateBuy = new DateTime(2024, 10, 29, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8007),
                             ShopItemId = 2,
                             UserId = 2
+                        },
+                        new
+                        {
+                            BillId = 3,
+                            DateBuy = new DateTime(2024, 10, 14, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8009),
+                            ShopItemId = 3,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            BillId = 4,
+                            DateBuy = new DateTime(2024, 11, 1, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8010),
+                            ShopItemId = 4,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            BillId = 5,
+                            DateBuy = new DateTime(2024, 10, 27, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8011),
+                            ShopItemId = 5,
+                            UserId = 5
                         });
                 });
 
@@ -138,7 +159,7 @@ namespace BussinessObject.Migrations
                         {
                             ItemId = 1,
                             Description = "14K Gold Ring",
-                            ExpirationDate = new DateTime(2024, 12, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6592),
+                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7708),
                             Interest = 0.05m,
                             IsApproved = true,
                             Name = "Gold Ring",
@@ -150,13 +171,49 @@ namespace BussinessObject.Migrations
                         {
                             ItemId = 2,
                             Description = "Luxury Watch",
-                            ExpirationDate = new DateTime(2025, 1, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6616),
+                            ExpirationDate = new DateTime(2025, 1, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7730),
                             Interest = 0.10m,
                             IsApproved = true,
                             Name = "Luxury Watch",
                             Status = "Active",
                             UserId = 2,
                             Value = 500.00m
+                        },
+                        new
+                        {
+                            ItemId = 3,
+                            Description = "24K Diamond Necklace",
+                            ExpirationDate = new DateTime(2025, 2, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7733),
+                            Interest = 0.07m,
+                            IsApproved = true,
+                            Name = "Diamond Necklace",
+                            Status = "Pending",
+                            UserId = 3,
+                            Value = 1200.00m
+                        },
+                        new
+                        {
+                            ItemId = 4,
+                            Description = "Sterling Silver Bracelet",
+                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7735),
+                            Interest = 0.04m,
+                            IsApproved = false,
+                            Name = "Silver Bracelet",
+                            Status = "Active",
+                            UserId = 4,
+                            Value = 150.00m
+                        },
+                        new
+                        {
+                            ItemId = 5,
+                            Description = "Porcelain Antique Vase",
+                            ExpirationDate = new DateTime(2025, 3, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7737),
+                            Interest = 0.08m,
+                            IsApproved = true,
+                            Name = "Antique Vase",
+                            Status = "Pending",
+                            UserId = 5,
+                            Value = 750.00m
                         });
                 });
 
@@ -191,8 +248,8 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ContractId = 1,
-                            ContractDate = new DateTime(2024, 11, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6794),
-                            ExpirationDate = new DateTime(2024, 12, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6795),
+                            ContractDate = new DateTime(2024, 10, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7913),
+                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7914),
                             ItemId = 1,
                             LoanAmount = 200.00m,
                             UserId = 1
@@ -200,11 +257,38 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ContractId = 2,
-                            ContractDate = new DateTime(2024, 11, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6797),
-                            ExpirationDate = new DateTime(2025, 1, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6797),
+                            ContractDate = new DateTime(2024, 9, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7916),
+                            ExpirationDate = new DateTime(2025, 1, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7916),
                             ItemId = 2,
                             LoanAmount = 400.00m,
                             UserId = 2
+                        },
+                        new
+                        {
+                            ContractId = 3,
+                            ContractDate = new DateTime(2024, 8, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7918),
+                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7919),
+                            ItemId = 3,
+                            LoanAmount = 900.00m,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            ContractId = 4,
+                            ContractDate = new DateTime(2024, 10, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7921),
+                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7922),
+                            ItemId = 4,
+                            LoanAmount = 120.00m,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            ContractId = 5,
+                            ContractDate = new DateTime(2024, 7, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7923),
+                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7924),
+                            ItemId = 5,
+                            LoanAmount = 600.00m,
+                            UserId = 5
                         });
                 });
 
@@ -273,26 +357,53 @@ namespace BussinessObject.Migrations
 
                     b.HasKey("ShopItemId");
 
-                    b.ToTable("ShopItemn");
+                    b.ToTable("ShopItem");
 
                     b.HasData(
                         new
                         {
                             ShopItemId = 1,
-                            DateAdded = new DateTime(2024, 11, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6759),
+                            DateAdded = new DateTime(2024, 10, 14, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7870),
                             Description = "High performance laptop for gaming.",
-                            IsExpired = false,
+                            IsExpired = true,
                             Name = "Gaming Laptop",
                             Price = 750.00m
                         },
                         new
                         {
                             ShopItemId = 2,
-                            DateAdded = new DateTime(2024, 11, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6761),
+                            DateAdded = new DateTime(2024, 10, 19, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7875),
                             Description = "Latest smartphone with advanced features.",
-                            IsExpired = false,
+                            IsExpired = true,
                             Name = "Latest Model Smartphone",
                             Price = 300.00m
+                        },
+                        new
+                        {
+                            ShopItemId = 3,
+                            DateAdded = new DateTime(2024, 10, 4, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7877),
+                            Description = "Professional electric guitar.",
+                            IsExpired = true,
+                            Name = "Electric Guitar",
+                            Price = 450.00m
+                        },
+                        new
+                        {
+                            ShopItemId = 4,
+                            DateAdded = new DateTime(2024, 10, 29, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7880),
+                            Description = "High resolution digital camera.",
+                            IsExpired = true,
+                            Name = "Digital Camera",
+                            Price = 600.00m
+                        },
+                        new
+                        {
+                            ShopItemId = 5,
+                            DateAdded = new DateTime(2024, 10, 24, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7881),
+                            Description = "Luxury brand handbag.",
+                            IsExpired = true,
+                            Name = "Designer Handbag",
+                            Price = 850.00m
                         });
                 });
 
@@ -378,6 +489,48 @@ namespace BussinessObject.Migrations
                             UserName = "jane_smith",
                             UserRealName = "Jane Smith",
                             UserRole = 2
+                        },
+                        new
+                        {
+                            UserID = 3,
+                            Address = "789 Pine St",
+                            CID = "C555123456",
+                            Dob = new DateTime(1985, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmailAddress = "michael.brown@example.com",
+                            Gender = true,
+                            Password = "Password789",
+                            Telephone = "555-123-4567",
+                            UserName = "michael_brown",
+                            UserRealName = "Michael Brown",
+                            UserRole = 1
+                        },
+                        new
+                        {
+                            UserID = 4,
+                            Address = "101 Maple St",
+                            CID = "C444987654",
+                            Dob = new DateTime(1992, 2, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmailAddress = "emily.jones@example.com",
+                            Gender = false,
+                            Password = "Password101",
+                            Telephone = "444-987-6543",
+                            UserName = "emily_jones",
+                            UserRealName = "Emily Jones",
+                            UserRole = 2
+                        },
+                        new
+                        {
+                            UserID = 5,
+                            Address = "202 Oakwood Ave",
+                            CID = "C333222111",
+                            Dob = new DateTime(1978, 12, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmailAddress = "robert.smith@example.com",
+                            Gender = true,
+                            Password = "Password202",
+                            Telephone = "333-222-1111",
+                            UserName = "robert_smith",
+                            UserRealName = "Robert Smith",
+                            UserRole = 1
                         });
                 });
 #pragma warning restore 612, 618

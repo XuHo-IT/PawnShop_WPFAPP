@@ -31,7 +31,17 @@ namespace WpfApp
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            PawnMemberWindow pawnMemberWindow = new PawnMemberWindow();
+            BuyMemberWindow pawnMemberWindow = new BuyMemberWindow();
+            pawnMemberWindow.Show();
+        }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            BillMemberWindow pawnMemberWindow = new BillMemberWindow();
+            pawnMemberWindow.Show();
+        }
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            ReBuyMemberWindow pawnMemberWindow = new ReBuyMemberWindow();
             pawnMemberWindow.Show();
         }
     }
