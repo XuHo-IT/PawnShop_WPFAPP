@@ -22,10 +22,35 @@ namespace DataAccessLayer
                 }
             }
         }
-
+        public List<PendingItemViewModel> GetPendingItems()
+        {
+            return (from item in _context.Item
+                    join user in _context.User on item.UserId equals user.UserID
+                    where item.IsApproved == false
+                    select new PendingItemViewModel
+                    {
+                        ItemId = item.ItemId,
+                        ItemName = item.Name,
+                        Description = item.Description,
+                        Value = item.Value,
+                        ExpirationDate = item.ExpirationDate,
+                        Status = item.Status,
+                        UserId = user.UserID,
+                        UserName = user.UserRealName,
+                        UserEmail = user.EmailAddress,
+                        UserPhone = user.Telephone,
+                        UserCID = user.CID,
+                    }).ToList();
+        }
         public PawnContractDAO()
         {
             _context = new PawnShopContext();
+        }
+
+        public List<PawnContract> GetTransaction()
+        {
+           return _context.PawnContracts.ToList();
+            
         }
 
         public void AddContract(PawnContract contract)
@@ -33,6 +58,8 @@ namespace DataAccessLayer
             _context.PawnContracts.Add(contract);
             _context.SaveChanges();
         }
+     
+
 
         public PawnContract? GetContractById(int contractId)
         {
@@ -43,18 +70,14 @@ namespace DataAccessLayer
             _context.Item.Add(item);
             _context.SaveChanges();
         }
+   
 
-        public List<Item> GetPendingItems()
-        {
-            return _context.Item.Where(i => !i.IsApproved).ToList();
-        }
-
-        public void ApproveItem(Item item, int userId)
+        public void ApproveItem(Item item)
         {
             var contract = new PawnContract
             {
                 ItemId = item.ItemId,
-                UserId = userId,
+                UserId = item.UserId,
                 LoanAmount = item.Value,
                 ContractDate = DateTime.Now,
                 ExpirationDate = item.ExpirationDate

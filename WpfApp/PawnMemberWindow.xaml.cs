@@ -21,6 +21,7 @@ namespace WpfApp
     /// </summary>
     public partial class PawnMemberWindow : Window
     {
+        int loggedInUserId = SessionManager.UserId;
         private readonly PawnContractRepository pawnContractRepository;
         public PawnMemberWindow()
         {
@@ -49,7 +50,8 @@ namespace WpfApp
                 Value = decimal.Parse(ValueTextBox.Text),
                 Status = StatusTextBox.Text,
                 ExpirationDate = ExpirationDatePicker.SelectedDate.Value, // Get the date from the DatePicker
-                Interest = decimal.Parse(InterstTextBox.Text)
+                Interest = decimal.Parse(InterstTextBox.Text),
+                UserId = SessionManager.UserId,
             };
 
             // Call the static method directly on the class

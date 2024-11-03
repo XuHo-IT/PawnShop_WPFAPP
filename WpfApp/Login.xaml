@@ -10,8 +10,8 @@
         <StackPanel Height="24" VerticalAlignment="Top" Margin="0,0,0,0"/>
 
         <TextBlock Text="FBT PawnShop" Margin="270,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="30" Width="267" Height="42"/>
-        <TextBlock Text="User name" Margin="238,135,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <TextBox Name="UserNameTextBox" Width="200" Height="25" Margin="332,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBlock Text="Email Address" Margin="238,135,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox Name="EmailTextBox" Width="200" Height="25" Margin="332,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
         <TextBlock Text="Password" Margin="245,183,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <PasswordBox Name="PasswordBox" Width="200" Height="25" Margin="332,174,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>

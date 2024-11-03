@@ -13,26 +13,35 @@ namespace WpfApp
     public partial class PawnAdmin : Window
     {
         private readonly PawnContractRepository pawnContractRepository;
+        private readonly ItemRepository itemRepository;
+
         public PawnAdmin()
         {
+            itemRepository = new ItemRepository();
             pawnContractRepository = new PawnContractRepository();
             InitializeComponent();
+            LoadPendingItems();
+        }
+
+        private void LoadPendingItems()
+        {
             PawnItemsGrid.ItemsSource = pawnContractRepository.GetPendingItems();
         }
 
         private void PawnItemsGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // Optional: Logic when selection changes
+       
         }
 
         private void AcceptButton_Click(object sender, RoutedEventArgs e)
         {
-            var selectedItem = PawnItemsGrid.SelectedItem as Item;
+            var selectedItem = PawnItemsGrid.SelectedItem as PendingItemViewModel;
             if (selectedItem != null)
             {
-                pawnContractRepository.ApproveItem(selectedItem, 1); 
+                var item = itemRepository.GetItemById(selectedItem.ItemId);
+                pawnContractRepository.ApproveItem(item);
                 MessageBox.Show("Item accepted.");
-                RefreshPendingItems();
+                LoadPendingItems();
             }
             else
             {
@@ -42,12 +51,13 @@ namespace WpfApp
 
         private void DenyButton_Click(object sender, RoutedEventArgs e)
         {
-            var selectedItem = PawnItemsGrid.SelectedItem as Item;
+            var selectedItem = PawnItemsGrid.SelectedItem as PendingItemViewModel;
             if (selectedItem != null)
             {
-                pawnContractRepository.RejectItem(selectedItem); 
+                var item = itemRepository.GetItemById(selectedItem.ItemId);
+                pawnContractRepository.RejectItem(item);
                 MessageBox.Show("Item denied.");
-                RefreshPendingItems();
+                LoadPendingItems();
             }
             else
             {
