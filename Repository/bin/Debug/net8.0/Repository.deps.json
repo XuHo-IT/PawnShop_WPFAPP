@@ -9,6 +9,7 @@
       "Repository/1.0.0": {
         "dependencies": {
           "BussinessObject": "1.0.0",
+          "DataAccessLayer": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.2",
           "Microsoft.Extensions.Configuration": "8.0.0",
@@ -996,11 +997,23 @@
       },
       "BussinessObject/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "runtime": {
           "BussinessObject.dll": {}
+        }
+      },
+      "DataAccessLayer/1.0.0": {
+        "dependencies": {
+          "BussinessObject": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.1"
+        },
+        "runtime": {
+          "DataAccessLayer.dll": {}
         }
       }
     }
@@ -1586,6 +1599,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "BussinessObject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataAccessLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

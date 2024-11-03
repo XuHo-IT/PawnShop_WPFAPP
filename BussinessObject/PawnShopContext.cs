@@ -4,9 +4,9 @@ using BussinessObject;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace Repository;
+namespace BussinessObject;
 
-public partial class PawnShopContext : DbContext
+public class PawnShopContext : DbContext
 {
     public PawnShopContext()
     {
@@ -52,13 +52,34 @@ public partial class PawnShopContext : DbContext
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-    
-        modelBuilder.Entity<Item>().HasData(
-            new Item { ItemId = 1, Name = "Gold Ring", Description = "14K Gold Ring", Value = 250.00m, Status = "Pending", ExpirationDate = DateTime.Now.AddMonths(1) },
-            new Item { ItemId = 2, Name = "Watch", Description = "Luxury Watch", Value = 500.00m, Status = "Active", ExpirationDate = DateTime.Now.AddMonths(2) }
-        );
 
- 
+        modelBuilder.Entity<Item>().HasData(
+      new Item
+      {
+          ItemId = 1,
+          Name = "Gold Ring",
+          Description = "14K Gold Ring",
+          Value = 250.00m,
+          Status = "Pending",
+          ExpirationDate = DateTime.Now.AddMonths(1),
+          Interest = 0.05m,
+          IsApproved = true // explicitly set IsApproved
+      },
+      new Item
+      {
+          ItemId = 2,
+          Name = "Watch",
+          Description = "Luxury Watch",
+          Value = 500.00m,
+          Status = "Active",
+          ExpirationDate = DateTime.Now.AddMonths(2),
+          Interest = 0.10m,
+          IsApproved = true // explicitly set IsApproved
+      }
+  );
+
+
+
         modelBuilder.Entity<ShopItem>().HasData(
             new ShopItem { ShopItemId = 1, Name = "Laptop", Description = "Gaming Laptop", Price = 750.00m, DateAdded = DateTime.Now, IsExpired = false },
             new ShopItem { ShopItemId = 2, Name = "Smartphone", Description = "Latest Model Smartphone", Price = 300.00m, DateAdded = DateTime.Now, IsExpired = false }

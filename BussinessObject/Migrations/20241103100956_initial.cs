@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace Repository.Migrations
+namespace BussinessObject.Migrations
 {
     /// <inheritdoc />
     public partial class initial : Migration
@@ -38,7 +38,9 @@ namespace Repository.Migrations
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     Value = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    ExpirationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    ExpirationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Interest = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    IsApproved = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -122,11 +124,11 @@ namespace Repository.Migrations
 
             migrationBuilder.InsertData(
                 table: "Item",
-                columns: new[] { "ItemId", "Description", "ExpirationDate", "Name", "Status", "Value" },
+                columns: new[] { "ItemId", "Description", "ExpirationDate", "Interest", "IsApproved", "Name", "Status", "Value" },
                 values: new object[,]
                 {
-                    { 1, "14K Gold Ring", new DateTime(2024, 12, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2520), "Gold Ring", "Pending", 250.00m },
-                    { 2, "Luxury Watch", new DateTime(2025, 1, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2542), "Watch", "Active", 500.00m }
+                    { 1, "14K Gold Ring", new DateTime(2024, 12, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(7867), 0.05m, true, "Gold Ring", "Pending", 250.00m },
+                    { 2, "Luxury Watch", new DateTime(2025, 1, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(7889), 0.10m, true, "Watch", "Active", 500.00m }
                 });
 
             migrationBuilder.InsertData(
@@ -134,8 +136,8 @@ namespace Repository.Migrations
                 columns: new[] { "ContractId", "ItemId", "ContractDate", "ExpirationDate", "LoanAmount", "UserId" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 11, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2711), new DateTime(2024, 12, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2711), 200.00m, 1 },
-                    { 2, 2, new DateTime(2024, 11, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2713), new DateTime(2025, 1, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2714), 400.00m, 2 }
+                    { 1, 1, new DateTime(2024, 11, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8041), new DateTime(2024, 12, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8041), 200.00m, 1 },
+                    { 2, 2, new DateTime(2024, 11, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8043), new DateTime(2025, 1, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8044), 400.00m, 2 }
                 });
 
             migrationBuilder.InsertData(
@@ -148,8 +150,8 @@ namespace Repository.Migrations
                 columns: new[] { "ShopItemId", "DateAdded", "Description", "IsExpired", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 11, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2681), "Gaming Laptop", false, "Laptop", 750.00m },
-                    { 2, new DateTime(2024, 11, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2683), "Latest Model Smartphone", false, "Smartphone", 300.00m }
+                    { 1, new DateTime(2024, 11, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8013), "Gaming Laptop", false, "Laptop", 750.00m },
+                    { 2, new DateTime(2024, 11, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8015), "Latest Model Smartphone", false, "Smartphone", 300.00m }
                 });
         }
 
