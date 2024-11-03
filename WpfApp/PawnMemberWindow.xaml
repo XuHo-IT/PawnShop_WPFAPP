@@ -1,12 +1,69 @@
 ﻿<Window x:Class="WpfApp.PawnMemberWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp"
-        mc:Ignorable="d"
-        Title="PawnMemberWindow" Height="450" Width="800">
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Submit Item" Height="400" Width="800">
     <Grid>
-        
+        <StackPanel Margin="20">
+            <TextBlock Text="Submit Pawn Item" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <!-- Placeholder for Item Name -->
+            <Grid Margin="0,0,0,10">
+                <TextBox Name="ItemNameTextBox"/>
+                <TextBlock Text="Enter Item Name" 
+                           Foreground="Gray"
+                           IsHitTestVisible="False"
+                           VerticalAlignment="Center"
+                           Margin="5,0,0,0"/>
+            </Grid>
+
+            <!-- Placeholder for Description -->
+            <Grid Margin="0,0,0,10">
+                <TextBox Name="DescriptionTextBox"/>
+                <TextBlock Text="Enter Description"
+                           Foreground="Gray"
+                           IsHitTestVisible="False"
+                           VerticalAlignment="Center"
+                           Margin="5,0,0,0"/>
+            </Grid>
+
+            <!-- Placeholder for Value -->
+            <Grid Margin="0,0,0,10">
+                <TextBox Name="ValueTextBox"/>
+                <TextBlock Text="Enter Value" 
+                           Foreground="Gray"
+                           IsHitTestVisible="False"
+                           VerticalAlignment="Center"
+                           Margin="5,0,0,0"/>
+            </Grid>
+
+            <!-- Placeholder for Status -->
+            <Grid Margin="0,0,0,10">
+                <TextBox Name="StatusTextBox"/>
+                <TextBlock Text="Enter Status" 
+                           Foreground="Gray"
+                           IsHitTestVisible="False"
+                           VerticalAlignment="Center"
+                           Margin="5,0,0,0"/>
+            </Grid>
+
+            <!-- Placeholder for Interest -->
+            <Grid Margin="0,0,0,10">
+                <TextBox Name="InterstTextBox"/>
+                <TextBlock Text="Enter Interest" 
+                           Foreground="Gray"
+                           IsHitTestVisible="False"
+                           VerticalAlignment="Center"
+                           Margin="5,0,0,0"/>
+            </Grid>
+
+            <!-- Placeholder for Expiration Date -->
+            <Grid Margin="0,0,0,10">
+                <DatePicker Name="ExpirationDatePicker" Margin="0,0,0,5"/>
+                
+            </Grid>
+
+            <Button Content="Submit Item" Click="SubmitItemButton_Click" Background="Green" Foreground="White" Height="40" Width="758"/>
+        </StackPanel>
     </Grid>
 </Window>

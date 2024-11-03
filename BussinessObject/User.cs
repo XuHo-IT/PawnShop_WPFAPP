@@ -48,6 +48,7 @@ namespace BussinessObject
         [StringLength(100, MinimumLength = 8, ErrorMessage = "Password must be at least 8 characters long.")]
         public string Password { get; set; }
 
+
         // Custom validation for Dob to ensure the user is at least 18 years old.
         public static ValidationResult ValidateDob(DateTime? dob, ValidationContext context)
         {

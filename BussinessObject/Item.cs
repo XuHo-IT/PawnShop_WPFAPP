@@ -25,5 +25,10 @@ namespace BussinessObject
 
         [DataType(DataType.Date)]
         public DateTime ExpirationDate { get; set; }
+
+        [Range(0.0, double.MaxValue, ErrorMessage = "Interest must be greater than or equal to 0.")]
+        public decimal Interest { get; set; }
+
+        public bool IsApproved { get; set; } = false;
     }
 }

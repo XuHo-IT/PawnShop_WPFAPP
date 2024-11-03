@@ -7,6 +7,36 @@
         mc:Ignorable="d"
         Title="PawnAdmin" Height="450" Width="800">
     <Grid>
-        
+        <!-- Account Information Section -->
+
+        <!-- Search Section -->
+
+        <!-- Data Grid for Pawned Items -->
+        <DataGrid Name="PawnItemsGrid" AutoGenerateColumns="False" Margin="10,21,10,45" IsReadOnly="True" SelectionChanged="PawnItemsGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Contract Number" Width="110" Binding="{Binding ContractNumber}" />
+                <DataGridTextColumn Header="User Full Name" Width="120" Binding="{Binding UserRealName}" />
+                <DataGridTextColumn Header="Item Name" Width="100" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Item Description" Width="100" Binding="{Binding Description}" />
+                <DataGridTextColumn Header="Item Money" Width="100" Binding="{Binding Value}" />
+                <DataGridTextColumn Header="Date expired" Width="100" Binding="{Binding ExpirationDate}" />
+                <DataGridTextColumn Header="Pawn Money" Width="100" Binding="{Binding PawnMoney}" />
+                <DataGridTextColumn Header="Phone Number" Width="110" Binding="{Binding PhoneNumber}" />
+                <DataGridTextColumn Header="Interest" Width="60" Binding="{Binding Interest}" />
+                <DataGridTextColumn Header="Pawn Date" Width="100" Binding="{Binding StartDate}" />
+                <DataGridTextColumn Header="Due Date" Width="100" Binding="{Binding EndDate}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Finalize Button -->
+        <Button Content="Accept" Width="100" Height="30" Margin="10,394,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Green" Foreground="White" Click="AcceptButton_Click" />
+
+        <StackPanel Height="42" VerticalAlignment="Top">
+            <StackPanel Height="19">
+                <Label Content="PawnShop Management" Height="20" Padding="0,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Content="Deny" Width="100" Height="30" Margin="145,394,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Red" Foreground="White" Click="DenyButton_Click" />
     </Grid>
 </Window>

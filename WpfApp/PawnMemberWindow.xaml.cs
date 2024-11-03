@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BussinessObject;
+using Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,5 +25,37 @@ namespace WpfApp
         {
             InitializeComponent();
         }
-    }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+        private void SubmitItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Check if the expiration date is selected
+            if (ExpirationDatePicker.SelectedDate == null)
+            {
+                MessageBox.Show("Please select an expiration date.");
+                return;
+            }
+
+            // Collect item details
+            var item = new Item
+            {
+                Name = ItemNameTextBox.Text,
+                Description = DescriptionTextBox.Text,
+                Value = decimal.Parse(ValueTextBox.Text),
+                Status = StatusTextBox.Text,
+                ExpirationDate = ExpirationDatePicker.SelectedDate.Value, // Get the date from the DatePicker
+                Interest = decimal.Parse(InterstTextBox.Text)
+            };
+
+            // Call the static method directly on the class
+            PawnContractRepository.Instance.SendToAdminForApproval(item);
+
+            MessageBox.Show("Item submitted for admin approval.");
+        }
+
+
+}
 }

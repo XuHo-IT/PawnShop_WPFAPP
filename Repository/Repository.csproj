@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BussinessObject\BussinessObject.csproj" />
+    <ProjectReference Include="..\DataAccessLayerDAO\DataAccessLayer.csproj" />
   </ItemGroup>
 
 </Project>
