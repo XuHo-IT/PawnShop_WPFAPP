@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace DataAccessLayer.Migrations
+namespace Repository.Migrations
 {
     /// <inheritdoc />
     public partial class initial : Migration
@@ -29,7 +29,7 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Items",
+                name: "Item",
                 columns: table => new
                 {
                     ItemId = table.Column<int>(type: "int", nullable: false)
@@ -42,7 +42,7 @@ namespace DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Items", x => x.ItemId);
+                    table.PrimaryKey("PK_Item", x => x.ItemId);
                 });
 
             migrationBuilder.CreateTable(
@@ -51,7 +51,6 @@ namespace DataAccessLayer.Migrations
                 {
                     ContractId = table.Column<int>(type: "int", nullable: false),
                     ItemId = table.Column<int>(type: "int", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     LoanAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     ContractDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -78,7 +77,7 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ShopItems",
+                name: "ShopItemn",
                 columns: table => new
                 {
                     ShopItemId = table.Column<int>(type: "int", nullable: false)
@@ -86,15 +85,16 @@ namespace DataAccessLayer.Migrations
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsExpired = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ShopItems", x => x.ShopItemId);
+                    table.PrimaryKey("PK_ShopItemn", x => x.ShopItemId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "User",
                 columns: table => new
                 {
                     UserID = table.Column<int>(type: "int", nullable: false)
@@ -112,7 +112,7 @@ namespace DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.UserID);
+                    table.PrimaryKey("PK_User", x => x.UserID);
                 });
 
             migrationBuilder.InsertData(
@@ -121,21 +121,21 @@ namespace DataAccessLayer.Migrations
                 values: new object[] { 1, 0m, 0m, 0m });
 
             migrationBuilder.InsertData(
-                table: "Items",
+                table: "Item",
                 columns: new[] { "ItemId", "Description", "ExpirationDate", "Name", "Status", "Value" },
                 values: new object[,]
                 {
-                    { 1, "14K Gold Ring", new DateTime(2024, 12, 3, 21, 19, 13, 121, DateTimeKind.Local).AddTicks(2712), "Gold Ring", "Pending", 250.00m },
-                    { 2, "Luxury Watch", new DateTime(2025, 1, 3, 21, 19, 13, 121, DateTimeKind.Local).AddTicks(2732), "Watch", "Active", 500.00m }
+                    { 1, "14K Gold Ring", new DateTime(2024, 12, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2520), "Gold Ring", "Pending", 250.00m },
+                    { 2, "Luxury Watch", new DateTime(2025, 1, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2542), "Watch", "Active", 500.00m }
                 });
 
             migrationBuilder.InsertData(
                 table: "PawnContracts",
-                columns: new[] { "ContractId", "ItemId", "ContractDate", "Description", "ExpirationDate", "LoanAmount", "UserId" },
+                columns: new[] { "ContractId", "ItemId", "ContractDate", "ExpirationDate", "LoanAmount", "UserId" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 11, 3, 21, 19, 13, 121, DateTimeKind.Local).AddTicks(2847), "14K Gold Ring Pawn", new DateTime(2024, 12, 3, 21, 19, 13, 121, DateTimeKind.Local).AddTicks(2848), 200.00m, 1 },
-                    { 2, 2, new DateTime(2024, 11, 3, 21, 19, 13, 121, DateTimeKind.Local).AddTicks(2850), "Luxury Watch", new DateTime(2025, 1, 3, 21, 19, 13, 121, DateTimeKind.Local).AddTicks(2851), 400.00m, 2 }
+                    { 1, 1, new DateTime(2024, 11, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2711), new DateTime(2024, 12, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2711), 200.00m, 1 },
+                    { 2, 2, new DateTime(2024, 11, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2713), new DateTime(2025, 1, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2714), 400.00m, 2 }
                 });
 
             migrationBuilder.InsertData(
@@ -144,12 +144,12 @@ namespace DataAccessLayer.Migrations
                 values: new object[] { 1, "FPT University", "FPT Pawn Shop", "1234-5555" });
 
             migrationBuilder.InsertData(
-                table: "ShopItems",
-                columns: new[] { "ShopItemId", "DateAdded", "Description", "Name", "Price" },
+                table: "ShopItemn",
+                columns: new[] { "ShopItemId", "DateAdded", "Description", "IsExpired", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 11, 3, 21, 19, 13, 121, DateTimeKind.Local).AddTicks(2829), "Gaming Laptop", "Laptop", 750.00m },
-                    { 2, new DateTime(2024, 11, 3, 21, 19, 13, 121, DateTimeKind.Local).AddTicks(2831), "Latest Model Smartphone", "Smartphone", 300.00m }
+                    { 1, new DateTime(2024, 11, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2681), "Gaming Laptop", false, "Laptop", 750.00m },
+                    { 2, new DateTime(2024, 11, 2, 21, 12, 54, 96, DateTimeKind.Local).AddTicks(2683), "Latest Model Smartphone", false, "Smartphone", 300.00m }
                 });
         }
 
@@ -160,7 +160,7 @@ namespace DataAccessLayer.Migrations
                 name: "CapitalInformation");
 
             migrationBuilder.DropTable(
-                name: "Items");
+                name: "Item");
 
             migrationBuilder.DropTable(
                 name: "PawnContracts");
@@ -169,10 +169,10 @@ namespace DataAccessLayer.Migrations
                 name: "ShopInformation");
 
             migrationBuilder.DropTable(
-                name: "ShopItems");
+                name: "ShopItemn");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "User");
         }
     }
 }

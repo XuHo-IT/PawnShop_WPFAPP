@@ -23,7 +23,7 @@ namespace BussinessObject
         [StringLength(50, ErrorMessage = "Status cannot exceed 50 characters.")]
         public string Status { get; set; }
 
-        [DataType(DataType.Date)]   
+        [DataType(DataType.Date)]
         public DateTime ExpirationDate { get; set; }
     }
 }

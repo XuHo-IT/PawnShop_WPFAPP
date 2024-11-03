@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BussinessObject
 {
@@ -9,10 +8,9 @@ namespace BussinessObject
         [Key]
         public int ContractId { get; set; }
 
-        [ForeignKey("Item")]
-        public int ItemId { get; set; }
         [Required]
-        public String Description { get; set; }
+        public int ItemId { get; set; }
+
         [Required]
         public int UserId { get; set; }
 

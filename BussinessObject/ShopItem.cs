@@ -21,5 +21,6 @@ namespace BussinessObject
         [DataType(DataType.Date)]
         public DateTime DateAdded { get; set; }
 
+        public bool IsExpired { get; set; }
     }
 }
