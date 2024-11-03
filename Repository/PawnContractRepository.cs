@@ -21,7 +21,8 @@ namespace Repository
         public void RejectItem(Item item) => PawnContractDAO.Instance.RejectItem(item);
 
         public List<PawnContract> GetTransaction() => PawnContractDAO.Instance.GetTransaction();
-       
+        public void RemoveItem(int contractId) => PawnContractDAO.Instance.RemoveItem(contractId);
+     
 
     }
 }

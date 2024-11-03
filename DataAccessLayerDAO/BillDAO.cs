@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    internal class BillDAO
+    public class BillDAO
     {
         private static BillDAO? instance = null;
         private static readonly object instanceLock = new object();
@@ -37,5 +37,40 @@ namespace DataAccessLayer
             return _context.Bills.ToList();
 
         }
+        public List<BillViewModel> GetBillsByUserId(int userId)
+        {
+            var billsWithItems = from bill in _context.Bills
+                                 join item in _context.ShopItem on bill.ShopItemId equals item.ShopItemId
+                                 where bill.UserId == userId
+                                 select new BillViewModel
+                                 {
+                                     BillId = bill.BillId,
+                                     ShopItemId = bill.ShopItemId,
+                                     UserId = bill.UserId,
+                                     DateBuy = bill.DateBuy,
+                                     ItemName = item.Name,
+                                     ItemPrice = item.Price,
+                                     ItemDescription = item.Description
+                                 };
+
+            return billsWithItems.ToList();
+        }
+    public bool InsertBill(Bill bill)
+        {
+            try
+            {
+                _context.Bills.Add(bill);
+                _context.SaveChanges();
+                return true; 
+            }
+            catch (Exception ex)
+            {
+            
+                Console.WriteLine($"Error inserting bill: {ex.Message}");
+                return false;
+            }
+        }
+
+
     }
 }

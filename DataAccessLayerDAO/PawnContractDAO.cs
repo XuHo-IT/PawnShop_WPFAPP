@@ -32,7 +32,7 @@ namespace DataAccessLayer
                         ItemId = item.ItemId,
                         ItemName = item.Name,
                         Description = item.Description,
-                        Value = item.Value,
+                        Value = item.Value * item.Interest,
                         ExpirationDate = item.ExpirationDate,
                         Status = item.Status,
                         UserId = user.UserID,
@@ -74,6 +74,7 @@ namespace DataAccessLayer
 
         public void ApproveItem(Item item)
         {
+            item.IsApproved = true;
             var contract = new PawnContract
             {
                 ItemId = item.ItemId,
@@ -82,12 +83,22 @@ namespace DataAccessLayer
                 ContractDate = DateTime.Now,
                 ExpirationDate = item.ExpirationDate
             };
-
             PawnContractDAO.Instance.AddContract(contract);
-            item.IsApproved = true;
             _context.SaveChanges();
         }
 
+        public void RemoveItem(int contractId)
+        {
+            using (var context = new PawnShopContext())
+            {
+                var contract = context.PawnContracts.SingleOrDefault(c => c.ContractId == contractId);
+                if (contract != null)
+                {
+                    context.PawnContracts.Remove(contract);
+                    context.SaveChanges();
+                }
+            }
+        }
         public void RejectItem(Item item)
         {
             _context.Item.Remove(item);

@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="BuyMemberWindow" Height="450" Width="800">
     <Grid>
-        
+        <DataGrid Name="PawnItemsGrid" AutoGenerateColumns="False" Margin="10,21,10,45" IsReadOnly="True" SelectionChanged="PawnItemsGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Item ID" Binding="{Binding ShopItemId}" Width="50"/>
+                <DataGridTextColumn Header="Item Name" Binding="{Binding Name}" Width="100"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="200"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Button Content="Buy" Width="100" Height="30" Margin="10,394,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Green" Foreground="White" Click="AcceptButton_Click" />
+
+        <StackPanel Height="42" VerticalAlignment="Top">
+            <StackPanel Height="19">
+                <Label Content="PawnShop Management" Height="20" Padding="0,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+
+       
     </Grid>
 </Window>
