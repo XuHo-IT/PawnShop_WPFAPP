@@ -13,9 +13,6 @@
     <Compile Update="BuyMemberWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="IncomeAdminWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="InformationWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,7 +31,7 @@
     <Compile Update="PawnMemberWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="TransactionAdminWindow.xaml.cs">
+    <Compile Update="StatisticAdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -43,9 +40,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="BuyMemberWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="IncomeAdminWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="InformationWindow.xaml">
@@ -66,7 +60,7 @@
     <Page Update="PawnMemberWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TransactionAdminWindow.xaml">
+    <Page Update="StatisticAdminWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

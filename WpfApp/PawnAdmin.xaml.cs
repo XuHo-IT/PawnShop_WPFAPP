@@ -1,6 +1,7 @@
 ﻿using BussinessObject;
 using Repository;
 using System;
+using System.Diagnostics.Contracts;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -11,10 +12,12 @@ namespace WpfApp
     /// </summary>
     public partial class PawnAdmin : Window
     {
+        private readonly PawnContractRepository pawnContractRepository;
         public PawnAdmin()
         {
+            pawnContractRepository = new PawnContractRepository();
             InitializeComponent();
-            PawnItemsGrid.ItemsSource = PawnContractRepository.Instance.GetPendingItems();
+            PawnItemsGrid.ItemsSource = pawnContractRepository.GetPendingItems();
         }
 
         private void PawnItemsGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -27,7 +30,7 @@ namespace WpfApp
             var selectedItem = PawnItemsGrid.SelectedItem as Item;
             if (selectedItem != null)
             {
-                PawnContractRepository.Instance.ApproveItem(selectedItem, 1); 
+                pawnContractRepository.ApproveItem(selectedItem, 1); 
                 MessageBox.Show("Item accepted.");
                 RefreshPendingItems();
             }
@@ -42,7 +45,7 @@ namespace WpfApp
             var selectedItem = PawnItemsGrid.SelectedItem as Item;
             if (selectedItem != null)
             {
-                PawnContractRepository.Instance.RejectItem(selectedItem); 
+                pawnContractRepository.RejectItem(selectedItem); 
                 MessageBox.Show("Item denied.");
                 RefreshPendingItems();
             }
@@ -56,7 +59,7 @@ namespace WpfApp
         private void RefreshPendingItems()
         {
             PawnItemsGrid.ItemsSource = null;
-            PawnItemsGrid.ItemsSource = PawnContractRepository.Instance.GetPendingItems();
+            PawnItemsGrid.ItemsSource = pawnContractRepository.GetPendingItems();
         }
     }
 }

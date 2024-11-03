@@ -11,8 +11,10 @@ namespace WpfApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("PAWN button clicked!");
-            // Your logic for PAWN button
+            // Create an instance of the PawnAdmin window
+            PawnAdmin pawnAdminWindow = new PawnAdmin();
+            // Show the PawnAdmin window
+            pawnAdminWindow.Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
