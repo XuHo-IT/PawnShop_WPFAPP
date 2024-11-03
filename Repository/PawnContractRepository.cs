@@ -1,5 +1,6 @@
 ﻿using BussinessObject;
 using DataAccessLayer;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,13 +12,16 @@ namespace Repository
 
         public void SendToAdminForApproval(Item item) => PawnContractDAO.Instance.SendToAdminForApproval(item);
 
-        public List<Item> GetPendingItems() => PawnContractDAO.Instance.GetPendingItems();
+        public List<PendingItemViewModel> GetPendingItems() => PawnContractDAO.Instance.GetPendingItems();
 
 
-        public void ApproveItem(Item item, int userId) => PawnContractDAO.Instance.ApproveItem(item, userId);
+        public void ApproveItem(Item item) => PawnContractDAO.Instance.ApproveItem(item);
        
 
         public void RejectItem(Item item) => PawnContractDAO.Instance.RejectItem(item);
-        
+
+        public List<PawnContract> GetTransaction() => PawnContractDAO.Instance.GetTransaction();
+       
+
     }
 }

@@ -6,7 +6,7 @@ namespace BussinessObject
 {
     public class Item
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ItemId { get; set; }
 
         [Required]
@@ -29,6 +29,11 @@ namespace BussinessObject
         [Range(0.0, double.MaxValue, ErrorMessage = "Interest must be greater than or equal to 0.")]
         public decimal Interest { get; set; }
 
+
         public bool IsApproved { get; set; } = false;
+
+        [ForeignKey("User")]
+        public int UserId { get; set; }
+
     }
 }

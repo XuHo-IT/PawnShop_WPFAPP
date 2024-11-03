@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BussinessObject.Migrations
 {
     [DbContext(typeof(PawnShopContext))]
-    [Migration("20241103100956_initial")]
+    [Migration("20241103143104_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -24,6 +24,44 @@ namespace BussinessObject.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("BussinessObject.Bill", b =>
+                {
+                    b.Property<int>("BillId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BillId"));
+
+                    b.Property<DateTime>("DateBuy")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ShopItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BillId");
+
+                    b.ToTable("Bills");
+
+                    b.HasData(
+                        new
+                        {
+                            BillId = 1,
+                            DateBuy = new DateTime(2024, 10, 24, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6866),
+                            ShopItemId = 1,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            BillId = 2,
+                            DateBuy = new DateTime(2024, 10, 29, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6872),
+                            ShopItemId = 2,
+                            UserId = 2
+                        });
+                });
 
             modelBuilder.Entity("BussinessObject.CapitalInformation", b =>
                 {
@@ -50,9 +88,9 @@ namespace BussinessObject.Migrations
                         new
                         {
                             Id = 1,
-                            TotalCapital = 0m,
-                            TotalExpenditure = 0m,
-                            TotalIncome = 0m
+                            TotalCapital = 1000.00m,
+                            TotalExpenditure = 300.00m,
+                            TotalIncome = 500.00m
                         });
                 });
 
@@ -88,6 +126,9 @@ namespace BussinessObject.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Value")
                         .HasColumnType("decimal(18,2)");
 
@@ -100,22 +141,24 @@ namespace BussinessObject.Migrations
                         {
                             ItemId = 1,
                             Description = "14K Gold Ring",
-                            ExpirationDate = new DateTime(2024, 12, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(7867),
+                            ExpirationDate = new DateTime(2024, 12, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6592),
                             Interest = 0.05m,
                             IsApproved = true,
                             Name = "Gold Ring",
                             Status = "Pending",
+                            UserId = 1,
                             Value = 250.00m
                         },
                         new
                         {
                             ItemId = 2,
                             Description = "Luxury Watch",
-                            ExpirationDate = new DateTime(2025, 1, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(7889),
+                            ExpirationDate = new DateTime(2025, 1, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6616),
                             Interest = 0.10m,
                             IsApproved = true,
-                            Name = "Watch",
+                            Name = "Luxury Watch",
                             Status = "Active",
+                            UserId = 2,
                             Value = 500.00m
                         });
                 });
@@ -123,10 +166,10 @@ namespace BussinessObject.Migrations
             modelBuilder.Entity("BussinessObject.PawnContract", b =>
                 {
                     b.Property<int>("ContractId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContractId"));
 
                     b.Property<DateTime>("ContractDate")
                         .HasColumnType("datetime2");
@@ -134,13 +177,16 @@ namespace BussinessObject.Migrations
                     b.Property<DateTime>("ExpirationDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("LoanAmount")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("ContractId", "ItemId");
+                    b.HasKey("ContractId");
 
                     b.ToTable("PawnContracts");
 
@@ -148,18 +194,18 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ContractId = 1,
+                            ContractDate = new DateTime(2024, 11, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6794),
+                            ExpirationDate = new DateTime(2024, 12, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6795),
                             ItemId = 1,
-                            ContractDate = new DateTime(2024, 11, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8041),
-                            ExpirationDate = new DateTime(2024, 12, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8041),
                             LoanAmount = 200.00m,
                             UserId = 1
                         },
                         new
                         {
                             ContractId = 2,
+                            ContractDate = new DateTime(2024, 11, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6797),
+                            ExpirationDate = new DateTime(2025, 1, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6797),
                             ItemId = 2,
-                            ContractDate = new DateTime(2024, 11, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8043),
-                            ExpirationDate = new DateTime(2025, 1, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8044),
                             LoanAmount = 400.00m,
                             UserId = 2
                         });
@@ -236,19 +282,19 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ShopItemId = 1,
-                            DateAdded = new DateTime(2024, 11, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8013),
-                            Description = "Gaming Laptop",
+                            DateAdded = new DateTime(2024, 11, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6759),
+                            Description = "High performance laptop for gaming.",
                             IsExpired = false,
-                            Name = "Laptop",
+                            Name = "Gaming Laptop",
                             Price = 750.00m
                         },
                         new
                         {
                             ShopItemId = 2,
-                            DateAdded = new DateTime(2024, 11, 3, 17, 9, 56, 597, DateTimeKind.Local).AddTicks(8015),
-                            Description = "Latest Model Smartphone",
+                            DateAdded = new DateTime(2024, 11, 3, 21, 31, 4, 40, DateTimeKind.Local).AddTicks(6761),
+                            Description = "Latest smartphone with advanced features.",
                             IsExpired = false,
-                            Name = "Smartphone",
+                            Name = "Latest Model Smartphone",
                             Price = 300.00m
                         });
                 });
@@ -306,6 +352,36 @@ namespace BussinessObject.Migrations
                     b.HasKey("UserID");
 
                     b.ToTable("User");
+
+                    b.HasData(
+                        new
+                        {
+                            UserID = 1,
+                            Address = "123 Main St",
+                            CID = "C123456789",
+                            Dob = new DateTime(1990, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmailAddress = "john.doe@example.com",
+                            Gender = true,
+                            Password = "Password123",
+                            Telephone = "123-456-7890",
+                            UserName = "john_doe",
+                            UserRealName = "John Doe",
+                            UserRole = 1
+                        },
+                        new
+                        {
+                            UserID = 2,
+                            Address = "456 Oak St",
+                            CID = "C987654321",
+                            Dob = new DateTime(1988, 8, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmailAddress = "jane.smith@example.com",
+                            Gender = false,
+                            Password = "Password456",
+                            Telephone = "098-765-4321",
+                            UserName = "jane_smith",
+                            UserRealName = "Jane Smith",
+                            UserRole = 2
+                        });
                 });
 #pragma warning restore 612, 618
         }

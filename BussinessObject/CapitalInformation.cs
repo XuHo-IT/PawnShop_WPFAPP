@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BussinessObject
 {
     public class CapitalInformation
     {
-        [Key] 
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Range(0, double.MaxValue, ErrorMessage = "Total capital cannot be negative.")]
         public decimal TotalCapital { get; set; }  // Set to public for Entity Framework

@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AminWindow.xaml.cs">
+    <Compile Update="AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="BuyMemberWindow.xaml.cs">
@@ -36,7 +36,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AminWindow.xaml">
+    <Page Update="AdminWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="BuyMemberWindow.xaml">

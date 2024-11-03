@@ -16,15 +16,20 @@
                 <TabItem Header="Pawn Statistics">
                     <DataGrid x:Name="dataGridPawn" AutoGenerateColumns="False" CanUserAddRows="False">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="ID" Binding="{Binding CustomerID}" Width="50"/>
-                            <DataGridTextColumn Header="Full Name" Binding="{Binding CustomerFullName}" Width="200"/>
-                            <DataGridTextColumn Header="Telephone" Binding="{Binding Telephone}" Width="100"/>
-                            <DataGridTextColumn Header="Email" Binding="{Binding EmailAddress}" Width="200"/>
-                            <DataGridTextColumn Header="Birthday" Binding="{Binding CustomerBirthday}" Width="100"/>
-                            <DataGridTextColumn Header="Status" Binding="{Binding CustomerStatus}" Width="50"/>
+                            <DataGridTextColumn Header="CID" Binding="{Binding CID}" Width="50"/>
+                            <DataGridTextColumn Header="Full Name" Binding="{Binding UserRealName}" Width="200"/>
+                            <DataGridTextColumn Header="Telephone" Binding="{Binding UserPhone}" Width="100"/>
+                            <DataGridTextColumn Header="Email" Binding="{Binding UserEmail}" Width="200"/>
+                            <DataGridTextColumn Header="Address" Binding="{Binding Address}" Width="200"/>
+                            <DataGridTextColumn Header="Item Name" Binding="{Binding ItemName}" Width="100"/>
+                            <DataGridTextColumn Header="Item Description" Binding="{Binding Description}" Width="150"/>
+                            <DataGridTextColumn Header="Item Money" Binding="{Binding ItemValue}" Width="100"/>
+                            <DataGridTextColumn Header="Interest" Binding="{Binding LoanAmount}" Width="100"/>
+                            <DataGridTextColumn Header="Time Expiration" Binding="{Binding ExpirationDate}" Width="150"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>
+
 
                 <TabItem Header="Liquidation Statistics">
                     <DataGrid x:Name="dataGridLiquidation" AutoGenerateColumns="False" CanUserAddRows="False">

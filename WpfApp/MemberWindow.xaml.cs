@@ -26,7 +26,13 @@ namespace WpfApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            PawnMemberWindow pawnMemberWindow = new PawnMemberWindow();
+            pawnMemberWindow.Show();
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            PawnMemberWindow pawnMemberWindow = new PawnMemberWindow();
+            pawnMemberWindow.Show();
         }
     }
 }
