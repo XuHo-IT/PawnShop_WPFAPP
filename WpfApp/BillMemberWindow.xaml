@@ -6,13 +6,16 @@
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
         Title="BillMemberWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="img/img.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
     <Grid>
         <!-- Account Information Section -->
 
         <!-- Search Section -->
 
         <!-- Data Grid for Pawned Items -->
-        <DataGrid Name="PawnItemsGrid" AutoGenerateColumns="False" Margin="10,21,10,45" IsReadOnly="True" >
+        <DataGrid Name="PawnItemsGrid" AutoGenerateColumns="False" Margin="10,42,10,90" IsReadOnly="True" Background="Gray">
             <DataGrid.Columns>
                 <!-- Item Details -->
               
@@ -26,10 +29,11 @@
 
         <StackPanel Height="42" VerticalAlignment="Top">
             <StackPanel Height="19">
-                <Label Content="Your Bill" Height="20" Padding="0,0,0,0"/>
+                <Label Content="Your Bill" Height="20" Padding="0,0,0,0" Background="gray"/>
             </StackPanel>
         </StackPanel>
 
+        <Button Content="Back to Main Menu" Width="128" Margin="10,356,0,22" Background="Red" Foreground="White" Click="Menu_Click" RenderTransformOrigin="0.46,1.082" HorizontalAlignment="Left" />
 
     </Grid>
 </Window>

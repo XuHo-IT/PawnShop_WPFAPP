@@ -47,5 +47,25 @@ namespace DataAccessLayer
             
             return _context.User.FirstOrDefault(u => u.EmailAddress == email && u.Password == password);
         }
+        public bool UpdateUser(User user)
+        {
+            var existingUser = _context.User.FirstOrDefault(u => u.UserID == user.UserID);
+            if (existingUser != null)
+            {
+                existingUser.UserName = user.UserName;
+                existingUser.Password = user.Password;
+                existingUser.UserRealName = user.UserRealName;
+                existingUser.Gender = user.Gender;
+                existingUser.EmailAddress = user.EmailAddress;
+                existingUser.Address = user.Address;
+                existingUser.Telephone = user.Telephone;
+                existingUser.Dob = user.Dob;
+                existingUser.CID = user.CID;
+          
+                _context.SaveChanges(); 
+                return true;
+            }
+            return false; 
+        }
     }
 }

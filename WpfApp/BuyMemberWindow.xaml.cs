@@ -36,10 +36,9 @@ namespace WpfApp
             billRepository = new BillRepository();
             capitalRepository = new CapitalRepository();
         }
-        private void PawnItemsGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void PawnItemsGrid_SelectionChanged()
         {
-         
-            MessageBox.Show("Selection changed in PawnItemsGrid.");
+        
         }
         private void AcceptButton_Click(object sender, RoutedEventArgs e)
         {
@@ -86,6 +85,10 @@ namespace WpfApp
             {
                 MessageBox.Show("Please select an item to buy.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+        }
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
 

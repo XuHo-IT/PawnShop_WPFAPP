@@ -15,7 +15,8 @@ namespace Repository
         public List<User> GetUsers() => UserDAO.Instance.GetUsers();
         public User GetUserById(int userId) => UserDAO.Instance.GetUseryId(userId);
         public User GetUserByEmailAndPassword(string email, string password) => UserDAO.Instance.GetUserByEmailAndPassword(email, password);
-       
 
+        public bool UpdateUser(User user) => UserDAO.Instance.UpdateUser(user);
+       
     }
 }

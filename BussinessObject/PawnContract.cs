@@ -14,8 +14,6 @@
 
             [ForeignKey("User")]
             public int UserId { get; set; }
-            [Required]
-            public String Description { get; set; }
 
             [Range(0.01, double.MaxValue, ErrorMessage = "Loan amount must be greater than 0.")]
             public decimal LoanAmount { get; set; }

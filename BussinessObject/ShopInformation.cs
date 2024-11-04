@@ -19,5 +19,8 @@ namespace BussinessObject
 
         [Phone(ErrorMessage = "Invalid phone number.")]
         public string Telephone { get; set; }
+        [Required(ErrorMessage = "Email address is required.")]
+        [EmailAddress(ErrorMessage = "Invalid email address format.")]
+        public string EmailAddress { get; set; }
     }
 }

@@ -30,3 +30,4 @@ obj/
 *.tmp
 *.cache
 *.vscode/
+BussinessObject/appsettings.json

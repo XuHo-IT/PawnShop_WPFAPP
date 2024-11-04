@@ -57,10 +57,16 @@ namespace WpfApp
                 }
             }
 
+
             // Bind the view model list to the DataGrids
             dataGridPawn.ItemsSource = transactionDetails;
             dataGridMoney.ItemsSource = capitalRepository.GetMoneys();
             dataGridLiquidation.ItemsSource = billRepository.GetBills();
+            dataGridUser.ItemsSource = userRepository.GetUsers();
+        }
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

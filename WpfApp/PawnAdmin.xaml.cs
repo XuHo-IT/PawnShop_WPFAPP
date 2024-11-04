@@ -82,5 +82,9 @@ namespace WpfApp
             PawnItemsGrid.ItemsSource = null;
             PawnItemsGrid.ItemsSource = pawnContractRepository.GetPendingItems();
         }
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

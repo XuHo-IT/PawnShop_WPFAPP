@@ -22,7 +22,7 @@ namespace BussinessObject
         public string Telephone { get; set; }
 
         [Required(ErrorMessage = "Gender is required.")]
-        public bool Gender { get; set; }
+        public string Gender { get; set; }
 
         [Required(ErrorMessage = "Email address is required.")]
         [EmailAddress(ErrorMessage = "Invalid email address format.")]
