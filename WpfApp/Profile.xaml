@@ -14,27 +14,27 @@
         <StackPanel Margin="0,20,0,10" >
             <StackPanel Orientation="Horizontal" Height="25">
                 <TextBlock Text="Tên đăng nhập:" Margin="0,5" Height="18" Width="98"/>
-                <TextBox x:Name="Username" Text="nv123456" IsReadOnly="True" Width="306" RenderTransformOrigin="-0.587,-0.515" TextChanged="Username_TextChanged" Height="18"/>
+                <TextBox x:Name="Username" Text="nv123456" IsReadOnly="True" Width="306" RenderTransformOrigin="-0.587,-0.515" TextChanged="Username_TextChanged" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="25">
                 <TextBlock Text="Mật khẩu (*)" Margin="0,5"/>
-                <PasswordBox x:Name="Password" Width="370"/>
+                <PasswordBox x:Name="Password" Width="370" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="25">
             <TextBlock Text="Nhập lại mật khẩu (*)" Margin="0,5"/>
-            <PasswordBox x:Name="ConfirmPassword" Width="350"/>
+            <PasswordBox x:Name="ConfirmPassword" Width="350" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="25">
             <TextBlock Text="Tên thật (*)" Margin="0,5"/>
-            <TextBox x:Name="RealName" Text="Trương Anh Tuấn" Width="405" TextChanged="RealName_TextChanged"/>
+            <TextBox x:Name="RealName" Text="Trương Anh Tuấn" Width="405" TextChanged="RealName_TextChanged" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="25">
             <TextBlock Text="Email" Margin="0,5" Width="39"/>
-            <TextBox x:Name="Email" Text="tuantade180205@gmail.com"/>
+            <TextBox x:Name="Email" Text="tuantade180205@gmail.com" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
 
             

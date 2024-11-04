@@ -1,72 +1,97 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using BussinessObject;
+using DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
 using Repository;
 
 namespace WpfApp
 {
-    public partial class Liquidation : Window
+    public partial class Liquidate : Window
     {
-        public DbSet<PawnContract> PawnContracts { get; set; }
-        public Liquidation()
+        private readonly IPawnContractRepository pawnContractRepository;
+
+        public Liquidate()
         {
             InitializeComponent();
+            pawnContractRepository = new PawnContractRepository();
             LoadPawnContracts();
+
         }
 
         private void LoadPawnContracts()
         {
+            var pawnContracts = pawnContractRepository.GetAllPawnContracts();
+            PawnContractsGrid.ItemsSource = pawnContracts;
+
+        }
+
+
+
+        private void BtnLiquidate_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedContract = (PawnContract)PawnContractsGrid.SelectedItem;
+
+            if (selectedContract == null)
+            {
+                MessageBox.Show("Please select a contract to liquidate.");
+                return;
+            }
+
             using (var context = new PawnShopContext())
             {
-                // Fetch all pawn contracts from the database
-                List<PawnContract> pawnContracts = context.PawnContracts.ToList();
+                var pawnContract = context.PawnContracts
+                    .FirstOrDefault(pc => pc.ContractId == selectedContract.ContractId);
 
-                // Bind the fetched data to the DataGrid
-                PawnItemsGrid.ItemsSource = pawnContracts;
+                if (pawnContract != null)
+                {
+                    // Fetch the associated item using ItemId
+                    var item = context.Items.FirstOrDefault(i => i.ItemId == pawnContract.ItemId);
+
+                    if (item != null)
+                    {
+                        var shopItem = new ShopItem
+                        {
+                            Name = item.Name,
+                            Description = item.Description,
+                            Price = item.Value,
+                            DateAdded = DateTime.Now
+                        };
+
+                        try
+                        {
+                            context.ShopItems.Add(shopItem);
+                            item.Status = "Liquidated"; // Update item's status
+                            context.PawnContracts.Remove(pawnContract); // Remove the pawn contract
+                            context.SaveChanges();
+
+                            MessageBox.Show("The item has been successfully liquidated and added to the shop.");
+                            LoadPawnContracts(); // Refresh the DataGrid
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error liquidating pawn contract: {ex.Message}");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Item associated with this pawn contract not found.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pawn contract not found.");
+                }
             }
         }
-        private void PawnItemsGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+
+        private void Menu_Click(object sender, RoutedEventArgs e)
         {
-            // Handle the selection changed event here
-            // Example: Get the selected item
-            if (PawnItemsGrid.SelectedItem is PawnContract selectedContract)
-            {
-                // You can now access the selected contract details
-                MessageBox.Show($"Selected Contract: {selectedContract.ContractNumber}");
-            }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Home_Click(object sender, RoutedEventArgs e)
-        {
-
+            // Code to navigate back to the main menu
+            this.Close(); // Or navigate to another window as needed
         }
     }
 }

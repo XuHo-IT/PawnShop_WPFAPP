@@ -3269,7 +3269,7 @@
       "projectName": "WpfApp",
       "projectPath": "C:\\Users\\Admin\\Source\\Repos\\PawnShop_WPFAPP\\WpfApp\\WpfApp.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Source\\Repos\\PawnShop_WPFAPP\\WpfApp\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\WpfApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
