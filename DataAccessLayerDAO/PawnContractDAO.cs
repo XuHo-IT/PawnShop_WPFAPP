@@ -42,6 +42,26 @@ namespace DataAccessLayer
                         UserCID = user.CID,
                     }).ToList();
         }
+        public List<PendingItemViewModel> GetPendingItemsPawn()
+        {
+            return (from item in _context.Item
+                    join user in _context.User on item.UserId equals user.UserID
+                    where item.IsApproved == false
+                    select new PendingItemViewModel
+                    {
+                        ItemId = item.ItemId,
+                        ItemName = item.Name,
+                        Description = item.Description,
+                        Value = item.Value ,
+                        ExpirationDate = item.ExpirationDate,
+                        Status = item.Status,
+                        UserId = user.UserID,
+                        UserName = user.UserRealName,
+                        UserEmail = user.EmailAddress,
+                        UserPhone = user.Telephone,
+                        UserCID = user.CID,
+                    }).ToList();
+        }
         public PawnContractDAO()
         {
             _context = new PawnShopContext();

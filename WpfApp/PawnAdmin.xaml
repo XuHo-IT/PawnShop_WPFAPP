@@ -7,11 +7,6 @@
         mc:Ignorable="d"
         Title="PawnAdmin" Height="550" Width="800">
     <Grid>
-        <!-- Account Information Section -->
-
-        <!-- Search Section -->
-
-        <!-- Data Grid for Pawned Items -->
         <DataGrid Name="PawnItemsGrid" AutoGenerateColumns="False" Margin="10,21,10,45" IsReadOnly="True" SelectionChanged="PawnItemsGrid_SelectionChanged">
             <DataGrid.Columns>
                 <!-- Item Details -->

@@ -12,21 +12,23 @@ namespace WpfApp
     /// </summary>
     public partial class ReBuyMemberWindow : Window
     {
+        decimal TotalIncome = new CapitalInformation().TotalIncome;
         private readonly int loggedInUserId = SessionManager.UserId;
         private readonly PawnContractRepository pawnContractRepository;
         private readonly ItemRepository itemRepository;
         private readonly UserRepository userRepository;
         private List<TransactionDetailViewModel> transactionDetails;
+        private readonly CapitalRepository capitalRepository;
 
         public ReBuyMemberWindow()
         {
             pawnContractRepository = new PawnContractRepository();
             itemRepository = new ItemRepository();
             userRepository = new UserRepository();
+            capitalRepository = new CapitalRepository();
 
             InitializeComponent();
 
-            // Fetch and filter transactions for the logged-in user
             var transactions = pawnContractRepository.GetTransaction()
                                 .Where(t => t.UserId == loggedInUserId);
 
@@ -78,7 +80,9 @@ namespace WpfApp
 
             if (result == MessageBoxResult.Yes)
             {
-            
+                decimal totalIncome = capitalRepository.GetTotalIncome();
+                totalIncome += selectedTransaction.ItemValue;
+                capitalRepository.UpdateTotalIncome(totalIncome);
                 pawnContractRepository.RemoveItem(selectedTransaction.ContractId);
 
             

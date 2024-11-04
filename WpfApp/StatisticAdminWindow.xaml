@@ -29,17 +29,30 @@
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>
+       
+                <TabItem Header="Total Money">
+                    <DataGrid x:Name="dataGridMoney" AutoGenerateColumns="False" CanUserAddRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="TotalCapital" Binding="{Binding TotalCapital}" Width="50"/>
+                            <DataGridTextColumn Header="TotalIncome" Binding="{Binding TotalIncome}" Width="200"/>
+                            <DataGridTextColumn Header="TotalExpenditure" Binding="{Binding TotalExpenditure}" Width="100"/>
+                            <DataGridTextColumn Header="TotalProfit" Binding="{Binding TotalProfit}" Width="100"/>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
 
 
                 <TabItem Header="Liquidation Statistics">
                     <DataGrid x:Name="dataGridLiquidation" AutoGenerateColumns="False" CanUserAddRows="False">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="ID" Binding="{Binding CustomerID}" Width="50"/>
-                            <DataGridTextColumn Header="Full Name" Binding="{Binding CustomerFullName}" Width="200"/>
-                            <DataGridTextColumn Header="Telephone" Binding="{Binding Telephone}" Width="100"/>
-                            <DataGridTextColumn Header="Email" Binding="{Binding EmailAddress}" Width="200"/>
-                            <DataGridTextColumn Header="Birthday" Binding="{Binding CustomerBirthday}" Width="100"/>
-                            <DataGridTextColumn Header="Status" Binding="{Binding CustomerStatus}" Width="50"/>
+                            <DataGridTextColumn Header="BillID" Binding="{Binding BillId}" Width="50"/>
+                            <DataGridTextColumn Header="Shop Item Id" Binding="{Binding ShopItemId}" Width="200"/>
+                            <DataGridTextColumn Header="Shop Item Id" Binding="{Binding ItemName}" Width="200"/>
+                            <DataGridTextColumn Header="User Id" Binding="{Binding ItemPrice}" Width="100"/>
+                            <DataGridTextColumn Header="Date Buy" Binding="{Binding ItemDescription}" Width="200"/>
+                            <DataGridTextColumn Header="User Id" Binding="{Binding UserId}" Width="100"/>
+                            <DataGridTextColumn Header="Date Buy" Binding="{Binding DateBuy}" Width="200"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>

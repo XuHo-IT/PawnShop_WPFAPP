@@ -36,7 +36,8 @@ namespace BussinessObject.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TotalCapital = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     TotalIncome = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    TotalExpenditure = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    TotalExpenditure = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    TotalProfit = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -139,28 +140,28 @@ namespace BussinessObject.Migrations
                 columns: new[] { "BillId", "DateBuy", "ShopItemId", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 10, 24, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8005), 1, 1 },
-                    { 2, new DateTime(2024, 10, 29, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8007), 2, 2 },
-                    { 3, new DateTime(2024, 10, 14, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8009), 3, 3 },
-                    { 4, new DateTime(2024, 11, 1, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8010), 4, 4 },
-                    { 5, new DateTime(2024, 10, 27, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8011), 5, 5 }
+                    { 1, new DateTime(2024, 10, 25, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1631), 1, 1 },
+                    { 2, new DateTime(2024, 10, 30, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1634), 2, 2 },
+                    { 3, new DateTime(2024, 10, 15, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1635), 3, 3 },
+                    { 4, new DateTime(2024, 11, 2, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1636), 4, 4 },
+                    { 5, new DateTime(2024, 10, 28, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1638), 5, 5 }
                 });
 
             migrationBuilder.InsertData(
                 table: "CapitalInformation",
-                columns: new[] { "Id", "TotalCapital", "TotalExpenditure", "TotalIncome" },
-                values: new object[] { 1, 1000.00m, 300.00m, 500.00m });
+                columns: new[] { "Id", "TotalCapital", "TotalExpenditure", "TotalIncome", "TotalProfit" },
+                values: new object[] { 1, 10000.00m, 10000.00m, 0m, 0m });
 
             migrationBuilder.InsertData(
                 table: "Item",
                 columns: new[] { "ItemId", "Description", "ExpirationDate", "Interest", "IsApproved", "Name", "Status", "UserId", "Value" },
                 values: new object[,]
                 {
-                    { 1, "14K Gold Ring", new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7708), 0.05m, true, "Gold Ring", "Pending", 1, 250.00m },
-                    { 2, "Luxury Watch", new DateTime(2025, 1, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7730), 0.10m, true, "Luxury Watch", "Active", 2, 500.00m },
-                    { 3, "24K Diamond Necklace", new DateTime(2025, 2, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7733), 0.07m, true, "Diamond Necklace", "Pending", 3, 1200.00m },
-                    { 4, "Sterling Silver Bracelet", new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7735), 0.04m, false, "Silver Bracelet", "Active", 4, 150.00m },
-                    { 5, "Porcelain Antique Vase", new DateTime(2025, 3, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7737), 0.08m, true, "Antique Vase", "Pending", 5, 750.00m }
+                    { 1, "14K Gold Ring", new DateTime(2024, 12, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1295), 0.05m, true, "Gold Ring", "Pending", 1, 250.00m },
+                    { 2, "Luxury Watch", new DateTime(2025, 1, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1320), 0.10m, true, "Luxury Watch", "Active", 2, 500.00m },
+                    { 3, "24K Diamond Necklace", new DateTime(2025, 2, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1322), 0.07m, true, "Diamond Necklace", "Pending", 3, 1200.00m },
+                    { 4, "Sterling Silver Bracelet", new DateTime(2024, 12, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1325), 0.04m, false, "Silver Bracelet", "Active", 4, 150.00m },
+                    { 5, "Porcelain Antique Vase", new DateTime(2025, 3, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1328), 0.08m, true, "Antique Vase", "Pending", 5, 750.00m }
                 });
 
             migrationBuilder.InsertData(
@@ -168,11 +169,11 @@ namespace BussinessObject.Migrations
                 columns: new[] { "ContractId", "ContractDate", "ExpirationDate", "ItemId", "LoanAmount", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 10, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7913), new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7914), 1, 200.00m, 1 },
-                    { 2, new DateTime(2024, 9, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7916), new DateTime(2025, 1, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7916), 2, 400.00m, 2 },
-                    { 3, new DateTime(2024, 8, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7918), new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7919), 3, 900.00m, 3 },
-                    { 4, new DateTime(2024, 10, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7921), new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7922), 4, 120.00m, 4 },
-                    { 5, new DateTime(2024, 7, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7923), new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7924), 5, 600.00m, 5 }
+                    { 1, new DateTime(2024, 10, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1509), new DateTime(2024, 12, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1510), 1, 200.00m, 1 },
+                    { 2, new DateTime(2024, 9, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1512), new DateTime(2025, 1, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1512), 2, 400.00m, 2 },
+                    { 3, new DateTime(2024, 8, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1514), new DateTime(2024, 12, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1515), 3, 900.00m, 3 },
+                    { 4, new DateTime(2024, 10, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1517), new DateTime(2024, 12, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1518), 4, 120.00m, 4 },
+                    { 5, new DateTime(2024, 7, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1520), new DateTime(2024, 12, 4, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1520), 5, 600.00m, 5 }
                 });
 
             migrationBuilder.InsertData(
@@ -185,11 +186,11 @@ namespace BussinessObject.Migrations
                 columns: new[] { "ShopItemId", "DateAdded", "Description", "IsExpired", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 10, 14, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7870), "High performance laptop for gaming.", true, "Gaming Laptop", 750.00m },
-                    { 2, new DateTime(2024, 10, 19, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7875), "Latest smartphone with advanced features.", true, "Latest Model Smartphone", 300.00m },
-                    { 3, new DateTime(2024, 10, 4, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7877), "Professional electric guitar.", true, "Electric Guitar", 450.00m },
-                    { 4, new DateTime(2024, 10, 29, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7880), "High resolution digital camera.", true, "Digital Camera", 600.00m },
-                    { 5, new DateTime(2024, 10, 24, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7881), "Luxury brand handbag.", true, "Designer Handbag", 850.00m }
+                    { 1, new DateTime(2024, 10, 15, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1463), "High performance laptop for gaming.", true, "Gaming Laptop", 750.00m },
+                    { 2, new DateTime(2024, 10, 20, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1468), "Latest smartphone with advanced features.", true, "Latest Model Smartphone", 300.00m },
+                    { 3, new DateTime(2024, 10, 5, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1470), "Professional electric guitar.", true, "Electric Guitar", 450.00m },
+                    { 4, new DateTime(2024, 10, 30, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1472), "High resolution digital camera.", true, "Digital Camera", 600.00m },
+                    { 5, new DateTime(2024, 10, 25, 10, 9, 26, 204, DateTimeKind.Local).AddTicks(1473), "Luxury brand handbag.", true, "Designer Handbag", 850.00m }
                 });
 
             migrationBuilder.InsertData(
