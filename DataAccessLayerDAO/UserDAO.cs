@@ -44,6 +44,7 @@ namespace DataAccessLayer
         }
         public User GetUserByEmailAndPassword(string email, string password)
         {
+            
             return _context.User.FirstOrDefault(u => u.EmailAddress == email && u.Password == password);
         }
     }

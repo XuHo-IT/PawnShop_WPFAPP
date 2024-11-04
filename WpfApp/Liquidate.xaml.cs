@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using BussinessObject;
+using Repository;
+using System.Windows;
 
 namespace WpfApp
 {
@@ -7,33 +9,87 @@ namespace WpfApp
     /// </summary>
     public partial class Liquidate : Window
     {
+        private readonly PawnContractRepository pawnContractRepository;
+
         public Liquidate()
         {
             InitializeComponent();
+            pawnContractRepository = new PawnContractRepository();
+            LoadPawnContracts();
+
         }
 
-        private void PawnItemsGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void LoadPawnContracts()
         {
-            // Implement logic for when a selection changes in the DataGrid
-            // For example, display details of the selected pawn item
+            var pawnContracts = pawnContractRepository.GetAllContracts();
+            PawnContractsGrid.ItemsSource = pawnContracts;
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+
+        private void BtnLiquidate_Click(object sender, RoutedEventArgs e)
         {
-            // Implement logic for the Liquidate button click
-            // For example, perform liquidation process
+            var selectedContract = (PawnContract)PawnContractsGrid.SelectedItem;
+
+            if (selectedContract == null)
+            {
+                MessageBox.Show("Please select a contract to liquidate.");
+                return;
+            }
+
+            using (var context = new PawnShopContext())
+            {
+                var pawnContract = context.PawnContracts
+                    .FirstOrDefault(pc => pc.ContractId == selectedContract.ContractId);
+
+                if (pawnContract != null)
+                {
+                    // Fetch the associated item using ItemId
+                    var item = context.Item.FirstOrDefault(i => i.ItemId == pawnContract.ItemId);
+
+                    if (item != null)
+                    {
+                        var shopItem = new ShopItem
+                        {
+                            Name = item.Name,
+                            Description = item.Description,
+                            Price = item.Value,
+                            DateAdded = DateTime.Now
+                        };
+
+                        try
+                        {
+                            context.ShopItem.Add(shopItem);
+                            item.Status = "Liquidated"; // Update item's status
+                            context.PawnContracts.Remove(pawnContract); // Remove the pawn contract
+                            context.SaveChanges();
+
+                            MessageBox.Show("The item has been successfully liquidated and added to the shop.");
+                            LoadPawnContracts(); // Refresh the DataGrid
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error liquidating pawn contract: {ex.Message}");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Item associated with this pawn contract not found.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pawn contract not found.");
+                }
+            }
         }
 
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-            // Implement logic for the Search button click
-            // For example, filter the DataGrid based on search criteria
-        }
 
         private void Menu_Click(object sender, RoutedEventArgs e)
         {
-            // Implement logic for the Menu button click
-            // For example, navigate to another menu or window
+            // Code to navigate back to the main menu
+            this.Close(); // Or navigate to another window as needed
         }
     }
 }

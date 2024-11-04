@@ -104,5 +104,9 @@ namespace DataAccessLayer
             _context.Item.Remove(item);
             _context.SaveChanges();
         }
+        public List<PawnContract> GetAllContracts()
+        {
+            return _context.PawnContracts.ToList(); ;
+        }
     }
 }

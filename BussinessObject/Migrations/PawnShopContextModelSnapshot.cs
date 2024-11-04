@@ -47,35 +47,35 @@ namespace BussinessObject.Migrations
                         new
                         {
                             BillId = 1,
-                            DateBuy = new DateTime(2024, 10, 24, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8005),
+                            DateBuy = new DateTime(2024, 10, 25, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(9029),
                             ShopItemId = 1,
                             UserId = 1
                         },
                         new
                         {
                             BillId = 2,
-                            DateBuy = new DateTime(2024, 10, 29, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8007),
+                            DateBuy = new DateTime(2024, 10, 30, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(9031),
                             ShopItemId = 2,
                             UserId = 2
                         },
                         new
                         {
                             BillId = 3,
-                            DateBuy = new DateTime(2024, 10, 14, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8009),
+                            DateBuy = new DateTime(2024, 10, 15, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(9032),
                             ShopItemId = 3,
                             UserId = 3
                         },
                         new
                         {
                             BillId = 4,
-                            DateBuy = new DateTime(2024, 11, 1, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8010),
+                            DateBuy = new DateTime(2024, 11, 2, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(9033),
                             ShopItemId = 4,
                             UserId = 4
                         },
                         new
                         {
                             BillId = 5,
-                            DateBuy = new DateTime(2024, 10, 27, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(8011),
+                            DateBuy = new DateTime(2024, 10, 28, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(9035),
                             ShopItemId = 5,
                             UserId = 5
                         });
@@ -159,7 +159,7 @@ namespace BussinessObject.Migrations
                         {
                             ItemId = 1,
                             Description = "14K Gold Ring",
-                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7708),
+                            ExpirationDate = new DateTime(2024, 12, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8803),
                             Interest = 0.05m,
                             IsApproved = true,
                             Name = "Gold Ring",
@@ -171,7 +171,7 @@ namespace BussinessObject.Migrations
                         {
                             ItemId = 2,
                             Description = "Luxury Watch",
-                            ExpirationDate = new DateTime(2025, 1, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7730),
+                            ExpirationDate = new DateTime(2025, 1, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8824),
                             Interest = 0.10m,
                             IsApproved = true,
                             Name = "Luxury Watch",
@@ -183,7 +183,7 @@ namespace BussinessObject.Migrations
                         {
                             ItemId = 3,
                             Description = "24K Diamond Necklace",
-                            ExpirationDate = new DateTime(2025, 2, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7733),
+                            ExpirationDate = new DateTime(2025, 2, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8827),
                             Interest = 0.07m,
                             IsApproved = true,
                             Name = "Diamond Necklace",
@@ -195,7 +195,7 @@ namespace BussinessObject.Migrations
                         {
                             ItemId = 4,
                             Description = "Sterling Silver Bracelet",
-                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7735),
+                            ExpirationDate = new DateTime(2024, 12, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8829),
                             Interest = 0.04m,
                             IsApproved = false,
                             Name = "Silver Bracelet",
@@ -207,7 +207,7 @@ namespace BussinessObject.Migrations
                         {
                             ItemId = 5,
                             Description = "Porcelain Antique Vase",
-                            ExpirationDate = new DateTime(2025, 3, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7737),
+                            ExpirationDate = new DateTime(2025, 3, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8831),
                             Interest = 0.08m,
                             IsApproved = true,
                             Name = "Antique Vase",
@@ -227,6 +227,10 @@ namespace BussinessObject.Migrations
 
                     b.Property<DateTime>("ContractDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ExpirationDate")
                         .HasColumnType("datetime2");
@@ -248,8 +252,9 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ContractId = 1,
-                            ContractDate = new DateTime(2024, 10, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7913),
-                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7914),
+                            ContractDate = new DateTime(2024, 10, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8957),
+                            Description = "14K Gold Ring",
+                            ExpirationDate = new DateTime(2024, 12, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8958),
                             ItemId = 1,
                             LoanAmount = 200.00m,
                             UserId = 1
@@ -257,8 +262,9 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ContractId = 2,
-                            ContractDate = new DateTime(2024, 9, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7916),
-                            ExpirationDate = new DateTime(2025, 1, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7916),
+                            ContractDate = new DateTime(2024, 9, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8960),
+                            Description = "Luxury Watch",
+                            ExpirationDate = new DateTime(2025, 1, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8961),
                             ItemId = 2,
                             LoanAmount = 400.00m,
                             UserId = 2
@@ -266,8 +272,9 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ContractId = 3,
-                            ContractDate = new DateTime(2024, 8, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7918),
-                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7919),
+                            ContractDate = new DateTime(2024, 8, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8962),
+                            Description = "24K Diamond Necklace",
+                            ExpirationDate = new DateTime(2024, 12, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8963),
                             ItemId = 3,
                             LoanAmount = 900.00m,
                             UserId = 3
@@ -275,8 +282,9 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ContractId = 4,
-                            ContractDate = new DateTime(2024, 10, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7921),
-                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7922),
+                            ContractDate = new DateTime(2024, 10, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8964),
+                            Description = "Sterling Silver Bracelet",
+                            ExpirationDate = new DateTime(2024, 12, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8965),
                             ItemId = 4,
                             LoanAmount = 120.00m,
                             UserId = 4
@@ -284,8 +292,9 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ContractId = 5,
-                            ContractDate = new DateTime(2024, 7, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7923),
-                            ExpirationDate = new DateTime(2024, 12, 3, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7924),
+                            ContractDate = new DateTime(2024, 7, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8966),
+                            Description = "Porcelain Antique Vase",
+                            ExpirationDate = new DateTime(2024, 12, 4, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8967),
                             ItemId = 5,
                             LoanAmount = 600.00m,
                             UserId = 5
@@ -363,7 +372,7 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ShopItemId = 1,
-                            DateAdded = new DateTime(2024, 10, 14, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7870),
+                            DateAdded = new DateTime(2024, 10, 15, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8926),
                             Description = "High performance laptop for gaming.",
                             IsExpired = true,
                             Name = "Gaming Laptop",
@@ -372,7 +381,7 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ShopItemId = 2,
-                            DateAdded = new DateTime(2024, 10, 19, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7875),
+                            DateAdded = new DateTime(2024, 10, 20, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8932),
                             Description = "Latest smartphone with advanced features.",
                             IsExpired = true,
                             Name = "Latest Model Smartphone",
@@ -381,7 +390,7 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ShopItemId = 3,
-                            DateAdded = new DateTime(2024, 10, 4, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7877),
+                            DateAdded = new DateTime(2024, 10, 5, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8934),
                             Description = "Professional electric guitar.",
                             IsExpired = true,
                             Name = "Electric Guitar",
@@ -390,7 +399,7 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ShopItemId = 4,
-                            DateAdded = new DateTime(2024, 10, 29, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7880),
+                            DateAdded = new DateTime(2024, 10, 30, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8935),
                             Description = "High resolution digital camera.",
                             IsExpired = true,
                             Name = "Digital Camera",
@@ -399,7 +408,7 @@ namespace BussinessObject.Migrations
                         new
                         {
                             ShopItemId = 5,
-                            DateAdded = new DateTime(2024, 10, 24, 23, 49, 1, 784, DateTimeKind.Local).AddTicks(7881),
+                            DateAdded = new DateTime(2024, 10, 25, 10, 26, 3, 969, DateTimeKind.Local).AddTicks(8936),
                             Description = "Luxury brand handbag.",
                             IsExpired = true,
                             Name = "Designer Handbag",

@@ -17,17 +17,17 @@ public class PawnShopContext : DbContext
     {
     }
 
-  
+
 
     public virtual DbSet<CapitalInformation> CapitalInformation { get; set; }
 
-    public virtual DbSet<Item> Item{ get; set; }
+    public virtual DbSet<Item> Item { get; set; }
 
     public virtual DbSet<ShopItem> ShopItem { get; set; }
     public virtual DbSet<PawnContract> PawnContracts { get; set; }
 
     public virtual DbSet<User> User { get; set; }
-    public virtual DbSet<ShopInformation> ShopInformation{ get; set; }
+    public virtual DbSet<ShopInformation> ShopInformation { get; set; }
     public virtual DbSet<Bill> Bills { get; set; }
 
 
@@ -75,12 +75,13 @@ public class PawnShopContext : DbContext
 
         // Seed data for PawnContract
         modelBuilder.Entity<PawnContract>().HasData(
-            new PawnContract { ContractId = 1, ItemId = 1, UserId = 1, LoanAmount = 200.00m, ContractDate = DateTime.Now.AddMonths(-1), ExpirationDate = DateTime.Now.AddMonths(1) },
-            new PawnContract { ContractId = 2, ItemId = 2, UserId = 2, LoanAmount = 400.00m, ContractDate = DateTime.Now.AddMonths(-2), ExpirationDate = DateTime.Now.AddMonths(2) },
-            new PawnContract { ContractId = 3, ItemId = 3, UserId = 3, LoanAmount = 900.00m, ContractDate = DateTime.Now.AddMonths(-3), ExpirationDate = DateTime.Now.AddMonths(1) },
-            new PawnContract { ContractId = 4, ItemId = 4, UserId = 4, LoanAmount = 120.00m, ContractDate = DateTime.Now.AddMonths(-1), ExpirationDate = DateTime.Now.AddMonths(1) },
-            new PawnContract { ContractId = 5, ItemId = 5, UserId = 5, LoanAmount = 600.00m, ContractDate = DateTime.Now.AddMonths(-4), ExpirationDate = DateTime.Now.AddMonths(1) }
+        new PawnContract { ContractId = 1, ItemId = 1, UserId = 1, Description = "14K Gold Ring", LoanAmount = 200.00m, ContractDate = DateTime.Now.AddMonths(-1), ExpirationDate = DateTime.Now.AddMonths(1) },
+        new PawnContract { ContractId = 2, ItemId = 2, UserId = 2, Description = "Luxury Watch", LoanAmount = 400.00m, ContractDate = DateTime.Now.AddMonths(-2), ExpirationDate = DateTime.Now.AddMonths(2) },
+        new PawnContract { ContractId = 3, ItemId = 3, UserId = 3, Description = "24K Diamond Necklace", LoanAmount = 900.00m, ContractDate = DateTime.Now.AddMonths(-3), ExpirationDate = DateTime.Now.AddMonths(1) },
+        new PawnContract { ContractId = 4, ItemId = 4, UserId = 4, Description = "Sterling Silver Bracelet", LoanAmount = 120.00m, ContractDate = DateTime.Now.AddMonths(-1), ExpirationDate = DateTime.Now.AddMonths(1) },
+        new PawnContract { ContractId = 5, ItemId = 5, UserId = 5, Description = "Porcelain Antique Vase", LoanAmount = 600.00m, ContractDate = DateTime.Now.AddMonths(-4), ExpirationDate = DateTime.Now.AddMonths(1) }
         );
+
 
         // Seed data for User
         modelBuilder.Entity<User>().HasData(
