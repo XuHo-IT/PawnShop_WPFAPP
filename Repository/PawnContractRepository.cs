@@ -23,6 +23,7 @@ namespace Repository
         public List<PawnContract> GetTransaction() => PawnContractDAO.Instance.GetTransaction();
         public void RemoveItem(int contractId) => PawnContractDAO.Instance.RemoveItem(contractId);
         public List<PendingItemViewModel> GetPendingItemsPawn() => PawnContractDAO.Instance.GetPendingItemsPawn();      
+        public List<PawnContract> GetAllContracts() => PawnContractDAO.Instance.GetAllContracts();
 
     }
 }

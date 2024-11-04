@@ -16,7 +16,7 @@ mono_crash.*
 obj/
 # Visual Studio 2022
 .vs/
-
+.vs\
 # Caches
 *.dtbcache.v2
 

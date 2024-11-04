@@ -20,5 +20,11 @@ namespace WpfApp
            StatisticAdminWindow statisticAdminWindow = new StatisticAdminWindow();
             statisticAdminWindow.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Liquidate liquidateWindow = new Liquidate();
+            liquidateWindow.Show();
+        }
     }
 }
