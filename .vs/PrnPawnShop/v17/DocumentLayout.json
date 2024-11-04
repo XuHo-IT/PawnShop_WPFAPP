@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\PawnShop_WPFAPP\\",
+  "WorkspaceRootPath": "D:\\CSharp_Projects\\PrnPawnShop\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{59368996-BBEB-4E46-8C7B-058ADC018026}|WpfApp\\WpfApp.csproj|c:\\users\\admin\\source\\repos\\pawnshop_wpfapp\\wpfapp\\liquidation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -210,6 +210,16 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-10-31T14:02:41.402Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             }
           ]
         },

@@ -7,24 +7,66 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Liquidation.xaml.cs">
+    <Compile Update="AminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BuyMemberWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="IncomeAdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InformationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Liquidate.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Profile.xaml.cs">
+    <Compile Update="MemberWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PawnAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PawnMemberWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TransactionAdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Liquidation.xaml">
+    <Page Update="AminWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BuyMemberWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="IncomeAdminWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InformationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Liquidate.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Login.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="MemberWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PawnAdmin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PawnMemberWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TransactionAdminWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Profile.xaml">
