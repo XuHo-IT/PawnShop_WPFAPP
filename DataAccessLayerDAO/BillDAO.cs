@@ -55,7 +55,24 @@ namespace DataAccessLayer
 
             return billsWithItems.ToList();
         }
-    public bool InsertBill(Bill bill)
+        public List<BillViewModel> GetBills()
+        {
+            var billsWithItems = from bill in _context.Bills
+                                 join item in _context.ShopItem on bill.ShopItemId equals item.ShopItemId
+                                 select new BillViewModel
+                                 {
+                                     BillId = bill.BillId,
+                                     ShopItemId = bill.ShopItemId,
+                                     UserId = bill.UserId,
+                                     DateBuy = bill.DateBuy,
+                                     ItemName = item.Name,
+                                     ItemPrice = item.Price,
+                                     ItemDescription = item.Description
+                                 };
+
+            return billsWithItems.ToList();
+        }
+        public bool InsertBill(Bill bill)
         {
             try
             {

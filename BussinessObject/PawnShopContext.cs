@@ -102,18 +102,17 @@ public class PawnShopContext : DbContext
         );
 
 
-        // Seed data for CapitalInformation
         modelBuilder.Entity<CapitalInformation>().HasData(
             new CapitalInformation
             {
                 Id = 1,
-                TotalCapital = 1000.00m,
-                TotalIncome = 500.00m,
-                TotalExpenditure = 300.00m
+                TotalCapital = 10000.00m,
+                TotalIncome = 0,
+                TotalExpenditure = 10000.00m,
+                TotalProfit = 0,
             }
         );
 
-        // Seed data for ShopInformation
         modelBuilder.Entity<ShopInformation>().HasData(
             new ShopInformation
             {

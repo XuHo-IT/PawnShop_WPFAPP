@@ -22,17 +22,19 @@ namespace WpfApp
     /// </summary>
     public partial class BuyMemberWindow : Window
     {
-
         int loggedInUserId = SessionManager.UserId;
         private readonly ShopItemRepository shopItemRepository;
         private readonly BillRepository billRepository;
-       
+        private readonly CapitalRepository capitalRepository;
+
+
         public BuyMemberWindow()
         {
             InitializeComponent(); 
             shopItemRepository = new ShopItemRepository();
             PawnItemsGrid.ItemsSource = shopItemRepository.GetItemShops();
             billRepository = new BillRepository();
+            capitalRepository = new CapitalRepository();
         }
         private void PawnItemsGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -48,7 +50,9 @@ namespace WpfApp
 
                 if (result == MessageBoxResult.Yes)
                 {
-              
+                    decimal totalIncome = capitalRepository.GetTotalIncome();
+                    totalIncome += selectedItem.Price;
+                    capitalRepository.UpdateTotalIncome(totalIncome);
                     Bill bill = new Bill
                     {
                         ShopItemId = selectedItem.ShopItemId,

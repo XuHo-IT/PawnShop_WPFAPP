@@ -1,5 +1,6 @@
 ﻿using BussinessObject;
 using Repository;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace WpfApp
@@ -9,14 +10,19 @@ namespace WpfApp
         private readonly PawnContractRepository pawnContractRepository;
         private readonly ItemRepository itemRepository;
         private readonly UserRepository userRepository;
+        private readonly CapitalRepository capitalRepository;
+        private readonly BillRepository billRepository;
 
         public StatisticAdminWindow()
         {
+            InitializeComponent();
+
+            // Initialize repositories
             pawnContractRepository = new PawnContractRepository();
             itemRepository = new ItemRepository();
             userRepository = new UserRepository();
-
-            InitializeComponent();
+            capitalRepository = new CapitalRepository();
+            billRepository = new BillRepository();
 
             // Load transactions
             var transactions = pawnContractRepository.GetTransaction();
@@ -40,20 +46,21 @@ namespace WpfApp
                         ItemName = item.Name,
                         ItemValue = item.Value,
                         Description = item.Description,
-                        UserRealName = user.UserRealName,             
+                        UserRealName = user.UserRealName,
                         UserPhone = user.Telephone,
                         UserEmail = user.EmailAddress,
                         Address = user.Address,
-                        CID= user.CID
+                        CID = user.CID
                     };
 
                     transactionDetails.Add(transactionDetail);
                 }
             }
 
-            // Bind the view model list to the DataGrid
+            // Bind the view model list to the DataGrids
             dataGridPawn.ItemsSource = transactionDetails;
+            dataGridMoney.ItemsSource = capitalRepository.GetMoneys();
+            dataGridLiquidation.ItemsSource = billRepository.GetBills();
         }
     }
-
 }

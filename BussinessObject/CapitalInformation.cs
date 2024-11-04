@@ -8,25 +8,15 @@ namespace BussinessObject
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Range(0, double.MaxValue, ErrorMessage = "Total capital cannot be negative.")]
-        public decimal TotalCapital { get; set; }  // Set to public for Entity Framework
+        public decimal TotalCapital { get; set; }  
 
         [Range(0, double.MaxValue, ErrorMessage = "Total income cannot be negative.")]
-        public decimal TotalIncome { get; set; }  // Set to public for Entity Framework
+        public decimal TotalIncome { get; set; }  
 
         [Range(0, double.MaxValue, ErrorMessage = "Total expenditure cannot be negative.")]
-        public decimal TotalExpenditure { get; set; }  // Set to public for Entity Framework
+        public decimal TotalExpenditure { get; set; }
+        public decimal TotalProfit { get; set; }
 
-        public void UpdateCapital(decimal amount, bool isIncome)
-        {
-            if (isIncome)
-            {
-                TotalIncome += amount;
-            }
-            else
-            {
-                TotalExpenditure += amount;
-            }
-            TotalCapital = TotalIncome - TotalExpenditure;
-        }
+
     }
 }
