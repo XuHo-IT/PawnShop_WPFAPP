@@ -93,5 +93,9 @@ namespace WpfApp
                 MessageBox.Show("Transaction completed successfully.");
             }
         }
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

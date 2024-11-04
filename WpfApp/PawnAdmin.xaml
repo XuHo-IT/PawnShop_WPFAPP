@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="PawnAdmin" Height="550" Width="800">
+        Title="PawnAdmin" Height="525" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="img/img.jpg" Stretch="UniformToFill" />
+    </Window.Background>
     <Grid>
-        <DataGrid Name="PawnItemsGrid" AutoGenerateColumns="False" Margin="10,21,10,45" IsReadOnly="True" SelectionChanged="PawnItemsGrid_SelectionChanged">
+        <DataGrid Name="PawnItemsGrid" AutoGenerateColumns="False" Margin="10,34,10,110" IsReadOnly="True" SelectionChanged="PawnItemsGrid_SelectionChanged" Background="Gray">
             <DataGrid.Columns>
                 <!-- Item Details -->
                 <DataGridTextColumn Header="Item ID" Binding="{Binding ItemId}" Width="50"/>
@@ -26,14 +29,16 @@
         </DataGrid>
 
         <!-- Finalize Button -->
-        <Button Content="Accept" Width="100" Height="30" Margin="10,394,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Green" Foreground="White" Click="AcceptButton_Click" />
+        <Button Content="Accept" Width="155" Height="60" Margin="635,432,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Green" Foreground="White" Click="AcceptButton_Click" />
 
-        <StackPanel Height="42" VerticalAlignment="Top">
+        <StackPanel Height="19" VerticalAlignment="Top" Background="gray">
             <StackPanel Height="19">
-                <Label Content="PawnShop Management" Height="20" Padding="0,0,0,0"/>
+                <Label Content="PawnShop Management" Height="20" Padding="0,0,0,0" Foreground="White"/>
             </StackPanel>
         </StackPanel>
 
-        <Button Content="Deny" Width="100" Height="30" Margin="145,394,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Red" Foreground="White" Click="DenyButton_Click" />
+        <Button Content="Deny" Width="145" Height="60" Margin="470,432,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Red" Foreground="White" Click="DenyButton_Click" />
+        <Button Content="Back to Main Menu" Width="165" Margin="10,429,0,17" Background="Red" Foreground="White" Click="Menu_Click" RenderTransformOrigin="0.46,1.082" HorizontalAlignment="Left" />
+
     </Grid>
 </Window>

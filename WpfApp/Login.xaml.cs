@@ -12,6 +12,7 @@ namespace WpfApp
         {
             InitializeComponent();
             userRepository = new UserRepository();
+
         }
 
         private void SignInButton_Click(object sender, RoutedEventArgs e)

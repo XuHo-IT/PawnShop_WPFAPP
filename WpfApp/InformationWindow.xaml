@@ -5,60 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="InformationWindow" Height="450" Width="800">
-    <Grid Margin="0,0,0,0">
+        Title="InformationWindow" Height="465" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="img/img.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid Margin="10">
+        <TextBlock Text="Your Profile" FontWeight="Bold" FontSize="24" HorizontalAlignment="Left" Margin="310,-15,0,45"/>
 
-
-        <TextBlock Text="Thay đổi thông tin cá nhân" FontWeight="Bold" Margin="0,0,0,418" HorizontalAlignment="Center" FontSize="14" Width="177"/>
-
-        <StackPanel Margin="0,20,0,10" >
-            <StackPanel Orientation="Horizontal" Height="25">
-                <TextBlock Text="Tên đăng nhập:" Margin="0,5" Height="18" Width="98"/>
-                <TextBox x:Name="Username" Text="nv123456" IsReadOnly="True" Width="306" RenderTransformOrigin="-0.587,-0.515" TextChanged="Username_TextChanged" Height="18"/>
+        <StackPanel Margin="0,20">
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Your App Name:" Width="120" VerticalAlignment="Center"/>
+                <TextBox x:Name="Username" Width="306" Height="25"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Height="25">
-                <TextBlock Text="Mật khẩu (*)" Margin="0,5"/>
-                <PasswordBox x:Name="Password" Width="370"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Height="25">
-                <TextBlock Text="Nhập lại mật khẩu (*)" Margin="0,5"/>
-                <PasswordBox x:Name="ConfirmPassword" Width="350"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Height="25">
-                <TextBlock Text="Tên thật (*)" Margin="0,5"/>
-                <TextBox x:Name="RealName" Text="Trương Anh Tuấn" Width="405" TextChanged="RealName_TextChanged"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Height="25">
-                <TextBlock Text="Email" Margin="0,5" Width="39"/>
-                <TextBox x:Name="Email" Text="tuantade180205@gmail.com"/>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Password" Width="120" VerticalAlignment="Center"/>
+                <TextBox x:Name="Password" Width="306" Height="25"/>
             </StackPanel>
 
 
-            <TextBlock Text="Giới tính (*)" Margin="0,5"/>
-            <StackPanel Orientation="Horizontal">
-                <RadioButton x:Name="Male" Content="Nam" GroupName="Gender" IsChecked="True"/>
-                <RadioButton x:Name="Female" Content="Nữ" GroupName="Gender" Margin="20,0,0,0"/>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Your Real Name:" Width="120" VerticalAlignment="Center"/>
+                <TextBox x:Name="RealName" Width="306" Height="25"/>
             </StackPanel>
 
-            <TextBlock Text="Ngày sinh (*)" Margin="0,5"/>
-            <DatePicker x:Name="BirthDate" SelectedDate="2004-10-24"/>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Email:" Width="120" VerticalAlignment="Center"/>
+                <TextBox x:Name="Email" Width="306" Height="25"/>
+            </StackPanel>
 
-            <TextBlock Text="Địa chỉ" Margin="0,5"/>
-            <TextBox x:Name="Address" Text="Phường Ba Đồn, Tỉnh Quảng Bình"/>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Gender" Width="120" VerticalAlignment="Center"/>
+                <ComboBox x:Name="GenderComboBox" Width="306" SelectedValuePath="Content">
+                    <ComboBoxItem Content="Male"/>
+                    <ComboBoxItem Content="Female"/>
+                    <ComboBoxItem Content="Other"/>
+                </ComboBox>
+            </StackPanel>
 
-            <TextBlock Text="Điện thoại" Margin="0,5" MinHeight="2"/>
-            <TextBox x:Name="Phone" Text="0123454321"/>
 
-            <TextBlock Text="CMT/Hộ chiếu (*)" Margin="0,5"/>
-            <TextBox x:Name="Passport" Text="123456789"/>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Date of Birth:" Width="120" VerticalAlignment="Center"/>
+                <DatePicker x:Name="BirthDate" Width="306" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Address:" Width="120" VerticalAlignment="Center"/>
+                <TextBox x:Name="Address" Width="306" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Phone:" Width="120" VerticalAlignment="Center"/>
+                <TextBox x:Name="Phone" Width="306" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="CID:" Width="120" VerticalAlignment="Center"/>
+                <TextBox x:Name="CID" Width="306" />
+            </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
-                <Button Content="Xác nhận" Width="100" Margin="0,0,10,0"/>
-                <Button Content="Thoát" Width="100"/>
+                <Button Content="Exit" Width="100" Click="ExitButton_Click" Background="red" Height="44"/>
+                <Button Content="Confirm" Width="100" Click="ConfirmButton_Click" Background="green"/>
+
             </StackPanel>
 
         </StackPanel>

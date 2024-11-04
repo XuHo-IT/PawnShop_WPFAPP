@@ -27,6 +27,10 @@ namespace WpfApp
             var userBills = billRepository.GetBillsByUserId(loggedInUserId);
             PawnItemsGrid.ItemsSource = userBills; // Set the DataGrid's source to the fetched bills
         }
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
 
         // Optionally, you can call LoadUserBills() from other parts of your code 
         // if you need to refresh the data after an operation.

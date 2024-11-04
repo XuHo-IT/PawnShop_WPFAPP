@@ -55,7 +55,8 @@ namespace WpfApp
                             Name = item.Name,
                             Description = item.Description,
                             Price = item.Value,
-                            DateAdded = DateTime.Now
+                            DateAdded = DateTime.Now,
+                            IsExpired = true,
                         };
 
                         try
@@ -87,9 +88,8 @@ namespace WpfApp
 
 
         private void Menu_Click(object sender, RoutedEventArgs e)
-        {
-            // Code to navigate back to the main menu
-            this.Close(); // Or navigate to another window as needed
+        {        
+            this.Close(); 
         }
     }
 }

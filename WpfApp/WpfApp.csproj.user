@@ -37,6 +37,9 @@
     <Compile Update="ReBuyMemberWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ShopInformationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="StatisticAdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -70,6 +73,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ReBuyMemberWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ShopInformationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="StatisticAdminWindow.xaml">

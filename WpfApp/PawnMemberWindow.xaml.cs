@@ -59,7 +59,11 @@ namespace WpfApp
 
             MessageBox.Show("Item submitted for admin approval.");
         }
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
 
 
-}
+    }
 }

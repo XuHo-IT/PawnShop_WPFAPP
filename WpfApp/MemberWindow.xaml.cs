@@ -44,5 +44,16 @@ namespace WpfApp
             ReBuyMemberWindow pawnMemberWindow = new ReBuyMemberWindow();
             pawnMemberWindow.Show();
         }
+        private void UserInformationMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            InformationWindow userProfileWindow = new InformationWindow();
+            userProfileWindow.Show();
+        }
+        private void ShopInformationMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            ShopInformationWindow userProfileWindow = new ShopInformationWindow();
+            userProfileWindow.Show();
+        }
+
     }
 }
